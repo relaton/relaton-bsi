@@ -1,0 +1,67 @@
+<bibdata type="standard">
+  <fetched>2021-04-20</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+  <title type="title-main" format="text/plain" language="fr" script="Latn">Petits navires. Appareils à gouverner commandés à distance</title>
+  <title type="main" format="text/plain" language="fr" script="Latn">Petits navires. Appareils à gouverner commandés à distance</title>
+  <title type="title-main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
+  <title type="main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
+  <uri type="src">https://shop.bsigroup.com/ProductDetail?pid=000000000030382851</uri>
+  <docidentifier type="BSI">BS EN ISO 8848:2021</docidentifier>
+  <docidentifier type="ISBN">978 0 539 02257 5</docidentifier>
+  <date type="published">
+    <on>2021-04-14</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>British Standards Institution</name>
+      <abbreviation>BSI</abbreviation>
+      <uri>https://www.bsigroup.com/</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">Steering wheels, Static loading, Fasteners, Boats, Deformation, Dimensions, Steering gear, Distant, Specimen preparation, Vehicle components, Mechanical testing, Testing conditions, Water transport engineering components, Steering control devices, Installation, Impact testing </abstract>
+  <status>
+    <stage>Current</stage>
+  </status>
+  <copyright>
+    <from>2021</from>
+    <owner>
+      <organization>
+        <name>British Standards Institution</name>
+        <abbreviation>BSI</abbreviation>
+        <uri>https://www.bsigroup.com/</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="complements">
+    <bibitem type="standard">
+      <formattedref format="text/plain" language="en" script="Latn">BS EN ISO 8848:2017</formattedref>
+      <uri type="src">https://shop.bsigroup.com/ProductDetail/?pid=000000000030415929</uri>
+    </bibitem>
+  </relation>
+  <relation type="complements">
+    <bibitem type="standard">
+      <formattedref format="text/plain" language="en" script="Latn">BS EN ISO 9775:2017</formattedref>
+      <uri type="src">https://shop.bsigroup.com/ProductDetail/?pid=000000000030352033</uri>
+    </bibitem>
+  </relation>
+  <relation type="complements">
+    <bibitem type="standard">
+      <formattedref format="text/plain" language="en" script="Latn">BS EN ISO 15652:2017</formattedref>
+      <uri type="src">https://shop.bsigroup.com/ProductDetail/?pid=000000000030352021</uri>
+    </bibitem>
+  </relation>
+  <place>London</place>
+  <ext>
+    <editorialgroup>
+      <technical-committee>GME/33</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>47.080</code>
+      <text>Small craft</text>
+    </ics>
+  </ext>
+</bibdata>

@@ -1,0 +1,115 @@
+---
+id: BSENISO8848-2021
+title:
+- type: title-main
+  content: Small craft. Remote mechanical steering systems
+  language: en
+  script: Latn
+  format: text/plain
+- type: main
+  content: Small craft. Remote mechanical steering systems
+  language: en
+  script: Latn
+  format: text/plain
+- type: title-main
+  content: Petits navires. Appareils à gouverner commandés à distance
+  language: fr
+  script: Latn
+  format: text/plain
+- type: main
+  content: Petits navires. Appareils à gouverner commandés à distance
+  language: fr
+  script: Latn
+  format: text/plain
+- type: title-main
+  content: Kleine Wasserfahrzeuge. Steueranlagen
+  language: de
+  script: Latn
+  format: text/plain
+- type: main
+  content: Kleine Wasserfahrzeuge. Steueranlagen
+  language: de
+  script: Latn
+  format: text/plain
+link:
+  content: https://shop.bsigroup.com/ProductDetail?pid=000000000030382851
+  type: src
+type: standard
+docid:
+- id: BS EN ISO 8848:2021
+  type: BSI
+- id: 978 0 539 02257 5
+  type: ISBN
+date:
+  type: published
+  value: '2021-04-14'
+contributor:
+  organization:
+    name: British Standards Institution
+    abbreviation: BSI
+    url: https://www.bsigroup.com/
+  role: publisher
+revdate: '2021-04-14'
+language: en
+script: Latn
+abstract:
+  content: 'Steering wheels, Static loading, Fasteners, Boats, Deformation, Dimensions,
+    Steering gear, Distant, Specimen preparation, Vehicle components, Mechanical testing,
+    Testing conditions, Water transport engineering components, Steering control devices,
+    Installation, Impact testing '
+  language: en
+  script: Latn
+  format: text/plain
+docstatus:
+  stage:
+    value: Current
+copyright:
+  owner:
+    name: British Standards Institution
+    abbreviation: BSI
+    url: https://www.bsigroup.com/
+  from: '2021'
+relation:
+- type: complements
+  bibitem:
+    id: BSENISO8848-2017
+    link:
+      content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030415929
+      type: src
+    type: standard
+    formattedref:
+      content: BS EN ISO 8848:2017
+      language: en
+      script: Latn
+      format: text/plain
+- type: complements
+  bibitem:
+    id: BSENISO9775-2017
+    link:
+      content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352033
+      type: src
+    type: standard
+    formattedref:
+      content: BS EN ISO 9775:2017
+      language: en
+      script: Latn
+      format: text/plain
+- type: complements
+  bibitem:
+    id: BSENISO15652-2017
+    link:
+      content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352021
+      type: src
+    type: standard
+    formattedref:
+      content: BS EN ISO 15652:2017
+      language: en
+      script: Latn
+      format: text/plain
+place: London
+fetched: '2021-04-20'
+editorialgroup:
+  technical_committee:
+    name: GME/33
+ics:
+  code: '47.080'

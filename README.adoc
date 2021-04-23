@@ -1,0 +1,168 @@
+= RelatonBsi retrieve BSI Standards for bibliographic use using the BibliographicItem model
+
+image:https://img.shields.io/gem/v/relaton-itu.svg["Gem Version", link="https://rubygems.org/gems/relaton-bsi"]
+image:https://github.com/relaton/relaton-bsi/workflows/macos/badge.svg["Build Status (macOS)", link="https://github.com/relaton/relaton-bsi/actions?workflow=macos"]
+image:https://github.com/relaton/relaton-bsi/workflows/windows/badge.svg["Build Status (Windows)", link="https://github.com/relaton/relaton-bsi/actions?workflow=windows"]
+image:https://github.com/relaton/relaton-bsi/workflows/ubuntu/badge.svg["Build Status (Ubuntu)", link="https://github.com/relaton/relaton-bsi/actions?workflow=ubuntu"]
+image:https://codeclimate.com/github/relaton/relaton-bsi/badges/gpa.svg["Code Climate", link="https://codeclimate.com/github/relaton/relaton-bsi"]
+image:https://img.shields.io/github/issues-pr-raw/relaton/relaton-bsi.svg["Pull Requests", link="https://github.com/relaton/relaton-bsi/pulls"]
+image:https://img.shields.io/github/commits-since/relaton/relaton-bsi/latest.svg["Commits since latest",link="https://github.com/relaton/relaton-bsi/releases"]
+
+RelatonBsi is a Ruby gem that implements the https://github.com/metanorma/metanorma-model-iso#iso-bibliographic-item[IsoBibliographicItem model].
+
+== Installation
+
+Add this line to your application's Gemfile:
+
+[source,ruby]
+----
+gem 'relaton-bsi'
+----
+
+And then execute:
+
+    $ bundle install
+
+Or install it yourself as:
+
+    $ gem install relaton-bsi
+
+== Usage
+
+=== Search for a standard using keywords
+
+[source,ruby]
+----
+require 'relaton_bsi'
+
+hit_collection = RelatonBsi::BsiBibliography.search("BSI BS EN ISO 8848")
+=> <RelatonBsi::HitCollection:0x007fead49fe1f8 @ref=BS EN ISO 8848 @fetched=false>
+
+item = hit_collection[1].fetch
+=> #<RelatonBsi::BsiBibliographicItem:0x007fead494fbf8
+ ...
+----
+
+=== XML serialization
+[source,ruby]
+----
+item.to_xml
+"<bibitem id="BSENISO8848-2017" type="standard">
+  <fetched>2021-04-23</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Small craft</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Remote steering systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Small craft - Remote steering systems</title>
+  <title type="title-main" format="text/plain" language="fr" script="Latn">Navires de plaisance. Appareils à gouverner commandés à distance</title>
+  <title type="main" format="text/plain" language="fr" script="Latn">Navires de plaisance. Appareils à gouverner commandés à distance</title>
+  <title type="title-main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
+  <title type="main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
+  <uri type="src">https://shop.bsigroup.com/ProductDetail?pid=000000000030415929</uri>
+  <docidentifier type="BSI">BS EN ISO 8848:2017</docidentifier>
+  <docidentifier type="ISBN">978 0 539 13462 9</docidentifier>
+  <date type="published">
+    <on>2021-04-14</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>British Standards Institution</name>
+      <abbreviation>BSI</abbreviation>
+      <uri>https://www.bsigroup.com/</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">Static loading, Testing conditions, Dimensions, Distant, Steering control devices, Specimen preparation, Deformation, Steering gear, Impact testing, Installation, Steering wheels, Fasteners, Boats, Vehicle components, Water transport engineering components, Mechanical testing </abstract>
+  <status>
+    <stage>Superseded, Withdrawn</stage>
+  </status>
+  <copyright>
+    <from>2021</from>
+    <owner>
+      <organization>
+        <name>British Standards Institution</name>
+        <abbreviation>BSI</abbreviation>
+        <uri>https://www.bsigroup.com/</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="complements">
+    <bibitem type="standard">
+      <formattedref format="text/plain" language="en" script="Latn">BS EN 28848:1993</formattedref>
+      <uri type="src">https://shop.bsigroup.com/ProductDetail/?pid=000000000030046595</uri>
+    </bibitem>
+  </relation>
+  <place>London</place>
+</bibitem>"
+----
+
+With `bibdata: true` option XML output wrapped with `bibdata` element and `ext` element added.
+[source,ruby]
+----
+item.to_xml bibdata: true
+"<bibdata type="standard">
+  <fetched>2021-04-23</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Small craft</title>
+  ...
+  <ext>
+    <editorialgroup>
+      <technical-committee>GME/33</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>47.080</code>
+      <text>Small craft</text>
+    </ics>
+  </ext>
+</bibdata>"
+----
+
+=== Get code, and year
+[source,ruby]
+----
+RelatonBsi::BsiBibliographicItem  RelatonBsi::BsiBibliography       
+[7] pry(main)> RelatonBsi::BsiBibliography.get "BSI BS EN ISO 8848:2021"
+[relaton-bsi] ("BSI BS EN ISO 8848:2021") fetching...
+[relaton-bsi] ("BSI BS EN ISO 8848:2021") found BS EN ISO 8848:2021
+=> #<RelatonBsi::BsiBibliographicItem:0x007feb14814ca8
+...
+
+RelatonBsi::BsiBibliography.get "BSI BS EN ISO 8848", "2021"
+[relaton-bsi] ("BSI BS EN ISO 8848") fetching...
+[relaton-bsi] ("BSI BS EN ISO 8848") found BS EN ISO 8848:2021
+=> #<RelatonBsi::BsiBibliographicItem:0x007feaf59188a8
+...
+----
+
+=== Create bibliographic item form YAML
+[source,ruby]
+----
+hash = YAML.load_file 'spec/fixtures/bibdata.yaml'
+=> {"id"=>"BSENISO8848-2021",
+...
+
+RelatonBsi::BsiBibliographicItem.from_hash hash
+=> #<RelatonBsi::BsiBibliographicItem:0x007feaf5109630
+...
+----
+
+=== Create bibliographic item from XML
+[source,ruby]
+----
+RelatonBsi::XMLParser.from_xml File.read("spec/fixtures/bibdata.xml", encoding: "UTF-8")
+=> #<RelatonBsi::BsiBibliographicItem:0x007feb14d50b68
+...
+----
+
+== Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+== Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/relaton/relaton-bsi.
+
+== License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
