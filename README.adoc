@@ -1,6 +1,6 @@
 = RelatonBsi retrieve BSI Standards for bibliographic use using the BibliographicItem model
 
-image:https://img.shields.io/gem/v/relaton-itu.svg["Gem Version", link="https://rubygems.org/gems/relaton-bsi"]
+image:https://img.shields.io/gem/v/relaton-bsi.svg["Gem Version", link="https://rubygems.org/gems/relaton-bsi"]
 image:https://github.com/relaton/relaton-bsi/workflows/macos/badge.svg["Build Status (macOS)", link="https://github.com/relaton/relaton-bsi/actions?workflow=macos"]
 image:https://github.com/relaton/relaton-bsi/workflows/windows/badge.svg["Build Status (Windows)", link="https://github.com/relaton/relaton-bsi/actions?workflow=windows"]
 image:https://github.com/relaton/relaton-bsi/workflows/ubuntu/badge.svg["Build Status (Ubuntu)", link="https://github.com/relaton/relaton-bsi/actions?workflow=ubuntu"]
