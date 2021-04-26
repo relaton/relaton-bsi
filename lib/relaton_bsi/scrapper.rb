@@ -16,12 +16,13 @@ module RelatonBsi
           language: ["en"],
           script: ["Latn"],
           title: fetch_titles(doc),
-          # doctype: hit_data[:type],
+          doctype: "specification",
           docstatus: fetch_status(doc),
           ics: fetch_ics(doc),
           date: fetch_dates(hit),
           contributor: fetch_contributors(doc),
           editorialgroup: fetch_editorialgroup(doc),
+          structuredidentifier: fetch_structuredid(hit),
           abstract: fetch_abstract(doc),
           copyright: fetch_copyright(doc, hit),
           link: fetch_link(HitCollection::DOMAIN + hit.hit[:url]),
@@ -76,6 +77,12 @@ module RelatonBsi
         wg = doc.at("//tr[th='Committee']/td")
         tc = RelatonIsoBib::IsoSubgroup.new name: wg.text
         RelatonIsoBib::EditorialGroup.new technical_committee: [tc]
+      end
+
+      # @param hit [RelatonBsi::Hit]
+      # @return [RelatonIsoBib::StructuredIdentifier]
+      def fetch_structuredid(hit)
+        RelatonIsoBib::StructuredIdentifier.new project_number: hit.hit[:code]
       end
 
       # Fetch relations.

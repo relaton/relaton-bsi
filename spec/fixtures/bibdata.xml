@@ -1,5 +1,5 @@
 <bibdata type="standard">
-  <fetched>2021-04-20</fetched>
+  <fetched>2021-04-26</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <title type="title-main" format="text/plain" language="fr" script="Latn">Petits navires. Appareils à gouverner commandés à distance</title>
@@ -56,6 +56,7 @@
   </relation>
   <place>London</place>
   <ext>
+    <doctype>specification</doctype>
     <editorialgroup>
       <technical-committee>GME/33</technical-committee>
     </editorialgroup>
@@ -63,5 +64,8 @@
       <code>47.080</code>
       <text>Small craft</text>
     </ics>
+    <structuredidentifier>
+      <project-number>BS EN ISO 8848:2021</project-number>
+    </structuredidentifier>
   </ext>
 </bibdata>

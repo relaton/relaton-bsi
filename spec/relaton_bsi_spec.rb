@@ -20,9 +20,9 @@ RSpec.describe RelatonBsi do
       xml = bib.to_xml bibdata: true
       write_file file, xml
       expect(xml).to be_equivalent_to read_xml(file)
-      # schema = Jing.new "spec/fixtures/isobib.rng"
-      # errors = schema.validate file
-      # expect(errors).to eq []
+      schema = Jing.new "spec/fixtures/isobib.rng"
+      errors = schema.validate file
+      expect(errors).to eq []
     end
   end
 
