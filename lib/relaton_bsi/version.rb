@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module RelatonBsi
-  VERSION = "1.7.pre2"
+  VERSION = "1.8.0"
 end

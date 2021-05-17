@@ -4,7 +4,7 @@ require_relative "relaton_bsi/version"
 require "relaton_bsi/bsi_bibliography"
 
 module RelatonBsi
- # Returns hash of XML reammar
+  # Returns hash of XML greammar
   # @return [String]
   def self.grammar_hash
     gem_path = File.expand_path "..", __dir__

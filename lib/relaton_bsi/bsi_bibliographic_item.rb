@@ -27,11 +27,20 @@ module RelatonBsi
     # @option opts [Boolean] :bibdata
     # @option opts [String] :lang language
     # @return [String] XML
-    def to_xml(**opts)
+    def to_xml(**opts) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
       super **opts do |b|
-        if opts[:bibdata]
-          b.send "price-code", price_code if price_code
-          b.send "cen-processing", cen_processing unless cen_processing.nil?
+        if opts[:bibdata] && (has_ext_attrs? || price_code ||
+          !cen_processing.nil?)
+          b.ext do
+            b.doctype doctype if doctype
+            b.horizontal horizontal unless horizontal.nil?
+            editorialgroup&.to_xml b
+            ics.each { |i| i.to_xml b }
+            structuredidentifier&.to_xml b
+            b.stagename stagename if stagename
+            b.send "price-code", price_code if price_code
+            b.send "cen-processing", cen_processing unless cen_processing.nil?
+          end
         end
       end
     end
