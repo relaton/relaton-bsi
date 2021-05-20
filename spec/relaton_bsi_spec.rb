@@ -82,4 +82,9 @@ RSpec.describe RelatonBsi do
       RelatonBsi::BsiBibliography.search "BS EN ISO 8848"
     end.to raise_error RelatonBib::RequestError
   end
+
+  it "return nil if code is empty" do
+    bib = RelatonBsi::BsiBibliography.get "BSI"
+    expect(bib).to be_nil
+  end
 end

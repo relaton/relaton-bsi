@@ -69,6 +69,8 @@ module RelatonBsi
       def search_filter(code) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
         %r{^BSI\s(?<code1>[^:]+)} =~ code
         warn "[relaton-bsi] (\"#{code}\") fetching..."
+        return [] unless code1
+
         result = search(code)
         result.select do |i|
           next true unless i.hit[:code]
