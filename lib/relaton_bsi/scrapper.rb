@@ -36,8 +36,9 @@ module RelatonBsi
       # @param doc [Mechanize::Page]
       # @return [Array<RelatonIsobib::Ics>]
       def fetch_ics(doc)
-        ics = doc.at("//tr[th='ICS']/td").text
-        [RelatonIsoBib::Ics.new(ics)]
+        doc.xpath("//tr[th='ICS']/td/node()").map(&:text).reject { |a| a.empty? }.map do |ics|
+          RelatonIsoBib::Ics.new(ics)
+        end
       end
 
       # Fetch abstracts.

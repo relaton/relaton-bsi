@@ -74,6 +74,15 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  it "document with multiple ICS" do
+    VCR.use_cassette "bs_202000_2020" do
+      bib = RelatonBsi::BsiBibliography.get "BSI BS 202000:2020"
+      expect(bib.docidentifier[0].id).to eq "BS 202000:2020"
+      expect(bib.ics[0].code).to eq "01.120"
+      expect(bib.ics[1].code).to eq "03.100.70"
+    end
+  end
+
   it "could not access site" do
     agent = double "agent"
     expect(agent).to receive(:get).with(kind_of(String)).and_raise SocketError
