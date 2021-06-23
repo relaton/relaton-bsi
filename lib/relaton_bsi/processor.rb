@@ -5,7 +5,7 @@ module RelatonBsi
     def initialize
       @short = :relaton_bsi
       @prefix = "BSI"
-      @defaultprefix = %r{^BSI\s}
+      @defaultprefix = %r{^(BSI|BS|PD)\s}
       @idtype = "BSI"
     end
 

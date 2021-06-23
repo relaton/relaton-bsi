@@ -29,15 +29,9 @@ module RelatonBsi
       # @param opts [Hash] options; restricted to :all_parts if all-parts reference is required
       # @return [String] Relaton XML serialisation of reference
       def get(code, year = nil, opts = {}) # rubocop:disable Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-        # if year.nil?
-        #   /^(?<code1>[^\s]+\s[^\s]+)\s\((\d{2}\/)?(?<year1>\d+)\)$/ =~ code
-        #   unless code1.nil?
-        #     code = code1
-        #     year = year1
-        #   end
-        # end
-
-        ret = bib_get1(code, year, opts)
+        c, y = code.split ':'
+        year ||= y
+        ret = bib_get1(c, year, opts)
         return nil if ret.nil?
 
         # ret = ret.to_most_recent_reference unless year || opts[:keep_year]
@@ -67,7 +61,8 @@ module RelatonBsi
       end
 
       def search_filter(code) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-        %r{^BSI\s(?<code1>[^:]+)} =~ code
+        # %r{^BSI\s(?<code1>[^:]+)} =~ code
+        code1 = code.sub(/^BSI\s/, "")
         warn "[relaton-bsi] (\"#{code}\") fetching..."
         return [] unless code1
 

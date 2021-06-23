@@ -16,7 +16,7 @@ RSpec.describe RelatonBsi do
   it "gets code" do
     VCR.use_cassette "bibdata" do
       file = "spec/fixtures/bibdata.xml"
-      bib = RelatonBsi::BsiBibliography.get("BSI BS EN ISO 8848", nil, {})
+      bib = RelatonBsi::BsiBibliography.get("BS EN ISO 8848", nil, {})
       xml = bib.to_xml bibdata: true
       write_file file, xml
       expect(xml).to be_equivalent_to read_xml(file)
@@ -29,7 +29,17 @@ RSpec.describe RelatonBsi do
   it "gets code and year" do
     VCR.use_cassette "bibdata" do
       file = "spec/fixtures/bibdata_year.xml"
-      bib = RelatonBsi::BsiBibliography.get("BSI BS EN ISO 8848", "2021", {})
+      bib = RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2021", {})
+      xml = bib.to_xml bibdata: true
+      write_file file, xml
+      expect(xml).to be_equivalent_to read_xml(file)
+    end
+  end
+
+  it "gets code and year in code" do
+    VCR.use_cassette "bibdata" do
+      file = "spec/fixtures/bibdata_year.xml"
+      bib = RelatonBsi::BsiBibliography.get("BS EN ISO 8848:2021")
       xml = bib.to_xml bibdata: true
       write_file file, xml
       expect(xml).to be_equivalent_to read_xml(file)
@@ -38,7 +48,7 @@ RSpec.describe RelatonBsi do
 
   it "warns when year is wrong" do
     VCR.use_cassette "wrong_year" do
-      expect { RelatonBsi::BsiBibliography.get("BSI BS EN ISO 8848", "2018", {}) }
+      expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
         .to output(%r{matches found for 2021, 2017})
         .to_stderr
     end
@@ -46,14 +56,14 @@ RSpec.describe RelatonBsi do
 
   it "return nil when reference not found" do
     VCR.use_cassette "not_found" do
-      result = RelatonBsi::BsiBibliography.get "BSI NOT FOUND"
+      result = RelatonBsi::BsiBibliography.get "BS NOT FOUND"
       expect(result).to be_nil
     end
   end
 
   it "fetch hits" do
     VCR.use_cassette "hits" do
-      hit_collection = RelatonBsi::BsiBibliography.search("BSI BS EN ISO 8848")
+      hit_collection = RelatonBsi::BsiBibliography.search("BS EN ISO 8848")
       expect(hit_collection.fetched).to be false
       expect(hit_collection.fetch).to be_instance_of RelatonBsi::HitCollection
       expect(hit_collection.fetched).to be true
@@ -76,7 +86,7 @@ RSpec.describe RelatonBsi do
 
   it "document with multiple ICS" do
     VCR.use_cassette "bs_202000_2020" do
-      bib = RelatonBsi::BsiBibliography.get "BSI BS 202000:2020"
+      bib = RelatonBsi::BsiBibliography.get "BS 202000:2020"
       expect(bib.docidentifier[0].id).to eq "BS 202000:2020"
       expect(bib.ics[0].code).to eq "01.120"
       expect(bib.ics[1].code).to eq "03.100.70"
@@ -90,10 +100,5 @@ RSpec.describe RelatonBsi do
     expect do
       RelatonBsi::BsiBibliography.search "BS EN ISO 8848"
     end.to raise_error RelatonBib::RequestError
-  end
-
-  it "return nil if code is empty" do
-    bib = RelatonBsi::BsiBibliography.get "BSI"
-    expect(bib).to be_nil
   end
 end
