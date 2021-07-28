@@ -76,6 +76,8 @@ module RelatonBsi
       # @return [RelatonIsoBib::EditorialGroup]
       def fetch_editorialgroup(doc)
         wg = doc.at("//tr[th='Committee']/td")
+        return unless wg
+
         tc = RelatonIsoBib::IsoSubgroup.new name: wg.text
         RelatonIsoBib::EditorialGroup.new technical_committee: [tc]
       end
