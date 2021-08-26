@@ -13,15 +13,13 @@ module RelatonBsi
         ext = isoitem.at "./ext"
         return data unless ext
 
-        data[:price_code] = ext.at("./price-code")&.text
-        data[:cen_processing] = ext.at("./cen-processing")&.text
         data
       end
 
       # @param item_hash [Hash]
       # @return [RelatonBsi::BsiBibliographicItem]
       def bib_item(item_hash)
-        hash = BsiBibliographicItem.new **item_hash
+        BsiBibliographicItem.new(**item_hash)
       end
     end
   end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "mechanize"
+# require "mechanize"
 require "relaton_iso_bib"
 require "relaton_bsi/bsi_bibliographic_item"
 require "relaton_bsi/scrapper"
@@ -20,8 +20,8 @@ module RelatonBsi
         HitCollection.new code, year
       rescue SocketError, Timeout::Error, Errno::EINVAL, Errno::ECONNRESET,
              EOFError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError,
-             Net::ProtocolError
-        raise RelatonBib::RequestError, "Could not access #{HitCollection::DOMAIN}"
+             Net::ProtocolError, Algolia::AlgoliaUnreachableHostError => e
+        raise RelatonBib::RequestError, e.message
       end
 
       # @param code [String] the BSI standard Code to look up
@@ -68,8 +68,6 @@ module RelatonBsi
 
         result = search(code)
         result.select do |i|
-          next true unless i.hit[:code]
-
           %r{^(?<code2>[^:]+)} =~ i.hit[:code]
           code2.include?(code1)
         end

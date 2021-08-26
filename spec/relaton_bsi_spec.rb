@@ -94,9 +94,11 @@ RSpec.describe RelatonBsi do
   end
 
   it "could not access site" do
-    agent = double "agent"
-    expect(agent).to receive(:get).with(kind_of(String)).and_raise SocketError
-    expect(Mechanize).to receive(:new).and_return agent
+    index = double "algolia index"
+    client = double "algolia client", init_index: index
+    expect(index).to receive(:search).and_raise Algolia::AlgoliaUnreachableHostError
+    expect(Algolia::Search::Client).to receive(:new).and_return client
+    # expect(RelatonBsi::Scrapper::Client).to receive(:query).and_raise
     expect do
       RelatonBsi::BsiBibliography.search "BS EN ISO 8848"
     end.to raise_error RelatonBib::RequestError
