@@ -96,7 +96,7 @@ item.to_xml
 
 === Typed links
 
-Each BSI documents has `src` type link.
+Each BSI document has `src` type link.
 
 [source,ruby]
 ----
