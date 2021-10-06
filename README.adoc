@@ -94,6 +94,16 @@ item.to_xml
 </bibitem>"
 ----
 
+=== Typed links
+
+Each BSI documents has `src` type link.
+
+[source,ruby]
+----
+item.link
+=> [#<RelatonBib::TypedUri:0x00007fc02a152768 @content=#<Addressable::URI:0x576c URI:https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems>, @type="src">]
+----
+
 With `bibdata: true` option XML output wrapped with `bibdata` element and `ext` element added.
 [source,ruby]
 ----
