@@ -20,7 +20,7 @@ module RelatonBsi
       config = Algolia::Search::Config.new(application_id: "575YE157G9", api_key: "a057b4e74099445df2eddb7940828a10")
       client = Algolia::Search::Client.new config, logger: ::Logger.new($stderr)
       index = client.init_index "shopify_products"
-      resp = index.search text, facetFilters: "product_type:standard"
+      resp = index.search text # , facetFilters: "product_type:standard"
       @array = hits resp[:hits]
     end
 

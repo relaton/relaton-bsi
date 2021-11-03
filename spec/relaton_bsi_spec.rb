@@ -46,6 +46,13 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  it "gets PAS" do
+    VCR.use_cassette "pas_2050_2011" do
+      bib = RelatonBsi::BsiBibliography.get "PAS 2050:2011"
+      expect(bib.docidentifier[0].id).to eq "PAS 2050:2011"
+    end
+  end
+
   it "warns when year is wrong" do
     VCR.use_cassette "wrong_year" do
       expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
