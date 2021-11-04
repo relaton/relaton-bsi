@@ -120,7 +120,7 @@ module RelatonBsi
       # @return [Array<RelatonBib::DocumentIdentifier>]
       def fetch_docid(docid, data)
         ids = [{ type: "BSI", id: docid }]
-        if data.any?
+        if data.any? && data["variants"]["edges"][0]["node"]["isbn"]
           isbn = data["variants"]["edges"][0]["node"]["isbn"]["value"]
           ids << { type: "ISBN", id: isbn }
         end

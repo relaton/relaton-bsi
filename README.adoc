@@ -124,11 +124,10 @@ item.to_xml bibdata: true
 </bibdata>"
 ----
 
-=== Get code, and year
+=== Get standard by code and year
 [source,ruby]
 ----
-RelatonBsi::BsiBibliographicItem  RelatonBsi::BsiBibliography       
-[7] pry(main)> RelatonBsi::BsiBibliography.get "BS EN ISO 8848:2021"
+RelatonBsi::BsiBibliography.get "BS EN ISO 8848:2021"
 [relaton-bsi] ("BS EN ISO 8848:2021") fetching...
 [relaton-bsi] ("BS EN ISO 8848:2021") found BS EN ISO 8848:2021
 => #<RelatonBsi::BsiBibliographicItem:0x007feb14814ca8
