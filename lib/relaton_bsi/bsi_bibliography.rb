@@ -24,17 +24,21 @@ module RelatonBsi
         raise RelatonBib::RequestError, e.message
       end
 
+      #
       # @param code [String] the BSI standard Code to look up
       # @param year [String] the year the standard was published (optional)
-      # @param opts [Hash] options; restricted to :all_parts if all-parts reference is required
+      # @param opts [Hash] options
+      # @option opts [Boolean] :all_parts if all-parts reference is required
+      # @option opts [Boolean] :no_year if last published document is required
+      #
       # @return [String] Relaton XML serialisation of reference
-      def get(code, year = nil, opts = {}) # rubocop:disable Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-        c, y = code.split ':'
+      def get(code, year = nil, opts = {})
+        c, y = code.split ":"
         year ||= y
         ret = bib_get1(c, year, opts)
         return nil if ret.nil?
 
-        # ret = ret.to_most_recent_reference unless year || opts[:keep_year]
+        ret = ret.to_most_recent_reference unless year || opts[:keep_year]
         # ret = ret.to_all_parts if opts[:all_parts]
         ret
       end
@@ -44,18 +48,19 @@ module RelatonBsi
       def fetch_ref_err(code, year, missed_years) # rubocop:disable Metrics/MethodLength
         id = year ? "#{code}:#{year}" : code
         warn "[relaton-bsi] WARNING: no match found online for #{id}. "\
-          "The code must be exactly like it is on the standards website."
+             "The code must be exactly like it is on the standards website."
         unless missed_years.empty?
-          warn "[relaton-bsi] (There was no match for #{year}, though there were matches "\
-            "found for #{missed_years.join(', ')}.)"
+          warn "[relaton-bsi] (There was no match for #{year}, though there "\
+               "were matches found for #{missed_years.join(', ')}.)"
         end
         # if /\d-\d/.match? code
-        #   warn "[relaton-bsi] The provided document part may not exist, or the document "\
-        #     "may no longer be published in parts."
+        #   warn "[relaton-bsi] The provided document part may not exist, or "\
+        #     "the document may no longer be published in parts."
         # else
-        #   warn "[relaton-bsi] If you wanted to cite all document parts for the reference, "\
-        #     "use \"#{code} (all parts)\".\nIf the document is not a standard, "\
-        #     "use its document type abbreviation (TS, TR, PAS, Guide)."
+        #   warn "[relaton-bsi] If you wanted to cite all document parts for "\
+        #     "the reference, use \"#{code} (all parts)\".\nIf the document "\
+        #     "is not a standard, use its document type abbreviation (TS, TR, "\
+        #     "PAS, Guide)."
         # end
         nil
       end

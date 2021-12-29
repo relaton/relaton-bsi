@@ -8,8 +8,6 @@ module RelatonBsi
   class HitCollection < RelatonBib::HitCollection
     DOMAIN = "https://shop.bsigroup.com"
 
-    # @return [Mechanize]
-    # attr_reader :agent
 
     # @param ref [String]
     # @param year [String]
@@ -28,11 +26,12 @@ module RelatonBsi
 
     # @param hits [Array<Hash>]
     # @return [Array<RelatonBsi::Hit>]
-    def hits(hits) # rubocop:disable Metrics/MethodLength
+    def hits(hits) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
       hits.map do |h|
+        code = h[:meta][:global][:primaryDesignator].sub(/\sLOOSELEAF|\s\(A5 LAMINATED\)/, "")
         Hit.new(
           {
-            code: h[:meta][:global][:primaryDesignator],
+            code: code,
             title: h[:title],
             url: h[:handle],
             date: h[:meta][:global][:publishedDate],
@@ -42,7 +41,7 @@ module RelatonBsi
             doctype: h[:product_type],
           }, self
         )
-      end
+      end.sort_by { |h| h.hit[:date] }.reverse
     end
   end
 end

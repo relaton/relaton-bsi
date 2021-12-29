@@ -36,6 +36,16 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  # it "gets BSI BS EN 16341" do
+  #   VCR.use_cassette "bibdata" do
+  #     file = "spec/fixtures/bibdata_no_year.xml"
+  #     bib = RelatonBsi::BsiBibliography.get("BSI BS EN 16341")
+  #     xml = bib.to_xml bibdata: true
+  #     write_file file, xml
+  #     expect(xml).to be_equivalent_to read_xml(file)
+  #   end
+  # end
+
   it "gets code and year in code" do
     VCR.use_cassette "bibdata" do
       file = "spec/fixtures/bibdata_year.xml"
@@ -56,7 +66,7 @@ RSpec.describe RelatonBsi do
   it "BS EN ISO 9001" do
     VCR.use_cassette "bs_en_iso_9001" do
       bib = RelatonBsi::BsiBibliography.get "BS EN ISO 9001"
-      expect(bib.docidentifier[0].id).to eq "BS EN ISO 9001:2015 (A5 LAMINATED)"
+      expect(bib.docidentifier[0].id).to eq "BS EN ISO 9001"
     end
   end
 
