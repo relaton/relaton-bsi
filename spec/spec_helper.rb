@@ -25,5 +25,5 @@ end
 
 def read_xml(file)
   File.read(file, encoding: "UTF-8")
-    .sub /(?<=<fetched>)\d{4}-\d{2}-\d{2}/, Date.today.to_s
+    .gsub(/(?<=<fetched>)\d{4}-\d{2}-\d{2}/, Date.today.to_s)
 end

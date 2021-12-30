@@ -36,15 +36,16 @@ RSpec.describe RelatonBsi do
     end
   end
 
-  # it "gets BSI BS EN 16341" do
-  #   VCR.use_cassette "bibdata" do
-  #     file = "spec/fixtures/bibdata_no_year.xml"
-  #     bib = RelatonBsi::BsiBibliography.get("BSI BS EN 16341")
-  #     xml = bib.to_xml bibdata: true
-  #     write_file file, xml
-  #     expect(xml).to be_equivalent_to read_xml(file)
-  #   end
-  # end
+  it "wipe out trailing ' - TC'" do
+    VCR.use_cassette "bs_en_iso_19011_2018" do
+      # file = "spec/fixtures/bs_en_iso_19011_2018.xml"
+      bib = RelatonBsi::BsiBibliography.get("BS EN ISO 19011:2018")
+      expect(bib.docidentifier.first.id).to eq "BS EN ISO 19011:2018"
+      # xml = bib.to_xml bibdata: true
+      # write_file file, xml
+      # expect(xml).to be_equivalent_to read_xml(file)
+    end
+  end
 
   it "gets code and year in code" do
     VCR.use_cassette "bibdata" do
