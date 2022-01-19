@@ -33,9 +33,9 @@ module RelatonBsi
       #
       # @return [String] Relaton XML serialisation of reference
       def get(code, year = nil, opts = {})
-        c, y = code.split ":"
-        year ||= y
-        ret = bib_get1(c, year, opts)
+        # y = code.split(":")[1]
+        year ||= code_parts(code)[:year]
+        ret = bib_get1(code, year, opts)
         return nil if ret.nil?
 
         ret = ret.to_most_recent_reference unless year || opts[:keep_year]
@@ -66,16 +66,28 @@ module RelatonBsi
       end
 
       def search_filter(code) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-        # %r{^BSI\s(?<code1>[^:]+)} =~ code
-        code1 = code.sub(/^BSI\s/, "")
+        # %r{^(?:BSI\s)?(?<code1>[^:]+)} =~ code
+        # %r{^(?<code1>[^:]+)} =~ code.sub(/^BSI\s/, "")
+        cp1 = code_parts code
         warn "[relaton-bsi] (\"#{code}\") fetching..."
-        return [] unless code1
+        return [] unless cp1
 
         result = search(code)
         result.select do |i|
-          %r{^(?<code2>[^:]+)} =~ i.hit[:code]
-          code2.include?(code1)
+          # %r{^(?<code2>[^:]+)} =~ i.hit[:code]
+          cp2 = code_parts i.hit[:code]
+          cp2[:code] == cp1[:code] && (!cp1[:a] || cp2[:a] == cp1[:a]) &&
+            (!cp1[:y] || cp2[:y] == cp1[:y])
         end
+      end
+
+      def code_parts(code)
+        %r{
+          ^(?:BSI\s)?(?<code>[^:]+)
+          (?::(?<year>\d{4}))?
+          (?:\+(?<a>[^:]+):)?
+          (?::(?<y>\d{4}))?
+        }x.match code
       end
 
       # Sort through the results from Isobib, fetching them three at a time,

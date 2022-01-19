@@ -71,6 +71,20 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  it "BS EN ISO 14044:2006" do
+    VCR.use_cassette "bs_en_iso_14044_2006" do
+      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 14044:2006"
+      expect(bib.docidentifier[0].id).to eq "BS EN ISO 14044:2006+A2:2020"
+    end
+  end
+
+  it "BS EN ISO 14044:2006+A1:2018" do
+    VCR.use_cassette "bs_en_iso_14044_2006_a1_2018" do
+      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 14044:2006+A1:2018"
+      expect(bib.docidentifier[0].id).to eq "BS EN ISO 14044:2006+A1:2018"
+    end
+  end
+
   it "warns when year is wrong" do
     VCR.use_cassette "wrong_year" do
       expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
@@ -93,19 +107,22 @@ RSpec.describe RelatonBsi do
       expect(hit_collection.fetch).to be_instance_of RelatonBsi::HitCollection
       expect(hit_collection.fetched).to be true
       expect(hit_collection.first).to be_instance_of RelatonBsi::Hit
-      expect(hit_collection.to_s).to eq "<RelatonBsi::HitCollection:"\
+      expect(hit_collection.to_s).to eq(
+        "<RelatonBsi::HitCollection:"\
         "#{format('%<id>#.14x', id: hit_collection.object_id << 1)} "\
-        "@ref=BS EN ISO 8848 @fetched=true>"
+        "@ref=BS EN ISO 8848 @fetched=true>",
+      )
     end
   end
 
   it "return string of hit" do
     VCR.use_cassette "hits" do
       hits = RelatonBsi::BsiBibliography.search("BS EN ISO 8848").fetch
-      expect(hits.first.to_s).to eq "<RelatonBsi::Hit:"\
-        "#{format('%<id>#.14x', id: hits.first.object_id << 1)} "\
-        '@text="BS EN ISO 8848" @fetched="true" @fullIdentifier="BSENISO8848-2021:2021"'\
-        ' @title="BS EN ISO 8848:2021">'
+      expect(hits.first.to_s).to eq(
+        "<RelatonBsi::Hit:#{format('%<id>#.14x', id: hits.first.object_id << 1)} "\
+        '@text="BS EN ISO 8848" @fetched="true" @fullIdentifier='\
+        '"BSENISO8848-2021:2021" @title="BS EN ISO 8848:2021">',
+      )
     end
   end
 
