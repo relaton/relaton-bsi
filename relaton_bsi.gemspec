@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock"
 
   spec.add_dependency "algolia", "~> 2.1.1"
+  spec.add_dependency "graphql", "1.13.6"
   spec.add_dependency "graphql-client", "~> 0.16.0"
   # spec.add_dependency "mechanize", "~> 2.8.0"
   spec.add_dependency "relaton-iso-bib", "~> 1.10.0"
