@@ -50,6 +50,7 @@ type: standard
 docid:
 - id: BS EN ISO 8848:2021
   type: BSI
+  primary: true
 - id: 978 0 539 02257 5
   type: ISBN
 date:

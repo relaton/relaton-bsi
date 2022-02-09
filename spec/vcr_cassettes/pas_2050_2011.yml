@@ -8,7 +8,7 @@ http_interactions:
       string: '{"query":"PAS 2050:2011"}'
     headers:
       User-Agent:
-      - Algolia for Ruby (2.1.1), Ruby (3.0.0)
+      - Algolia for Ruby (2.2.2), Ruby (3.0.0)
       X-Algolia-Api-Key:
       - a057b4e74099445df2eddb7940828a10
       X-Algolia-Application-Id:
@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 27 Jan 2022 19:22:49 GMT
+      - Tue, 08 Feb 2022 16:49:41 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -65,7 +65,7 @@ http_interactions:
         2050:2011"},"group_search":{"description":"Specification for the assessment
         of the life cycle greenhouse gas emissions of goods and services","member_price":68,"price":68,"title":"PAS
         2050:2011"}},"handle":"specification-for-the-assessment-of-the-life-cycle-greenhouse-gas-emissions-of-goods-and-services","vendor":"BSI
-        Shop","product_type":"fast-track-standard","template_suffix":"","id":6892183879845,"_tags":["id:6892183879845","indexing_token:538d7efe8267ff0e01067ee00dce1de1"],"tags":["format:digital","has-hardcopy","Ingestion-build-44616","Ingestion-build-48974","Ingestion-build-54484","Ingestion-build-58320"],"option_names":["title"],"variants_count":1,"variants_inventory_count":-300,"variants_min_price":68.0,"variants_max_price":68.0,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_961721e6-7c8d-45d8-a6d4-1863d304d53e.png?v=1625618031","created_at":"2021-07-07T01:33:48.000Z","published_at":"2021-07-07T01:33:48.000Z","body_html_safe":"","sku":"000000000030227173","barcode":null,"option1":"Digital","option2":null,"option3":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_management":null,"inventory_policy":"deny","inventory_quantity":-300,"variant_title":"Digital","inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":68.0,"compare_at_price":0,"price_ratio":0,"price_range":"50:75","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_961721e6-7c8d-45d8-a6d4-1863d304d53e.png?v=1625618031","named_tags":{},"named_tags_names":[],"recently_ordered_count":300,"objectID":"40309097070757","_snippetResult":{"body_html_safe":{"value":"","matchLevel":"none"}},"_highlightResult":{"title":{"value":"Specification
+        Shop","product_type":"fast-track-standard","template_suffix":"","id":6892183879845,"_tags":["id:6892183879845","indexing_token:538d7efe8267ff0e01067ee00dce1de1"],"tags":["format:digital","has-hardcopy","Ingestion-build-44616","Ingestion-build-48974","Ingestion-build-54484","Ingestion-build-58320"],"option_names":["title"],"variants_count":1,"variants_inventory_count":-300,"variants_min_price":68.0,"variants_max_price":68.0,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_961721e6-7c8d-45d8-a6d4-1863d304d53e.png?v=1625618031","created_at":"2021-07-07T01:33:48.000Z","published_at":"2021-07-07T01:33:48.000Z","body_html_safe":"","sku":"000000000030227173","barcode":null,"option1":"Digital","option2":null,"option3":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_management":null,"inventory_policy":"deny","inventory_quantity":-301,"variant_title":"Digital","inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":68.0,"compare_at_price":0,"price_ratio":0,"price_range":"50:75","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_961721e6-7c8d-45d8-a6d4-1863d304d53e.png?v=1625618031","named_tags":{},"named_tags_names":[],"recently_ordered_count":301,"objectID":"40309097070757","_snippetResult":{"body_html_safe":{"value":"","matchLevel":"none"}},"_highlightResult":{"title":{"value":"Specification
         for the assessment of the life cycle greenhouse gas emissions of goods and
         services","matchLevel":"none","matchedWords":[]},"meta":{"global":{"descriptorsAlgoliaStringArray":[{"value":"Pollutant
         gases","matchLevel":"none","matchedWords":[]},{"value":"Exhaust gases","matchLevel":"none","matchedWords":[]},{"value":"Life
@@ -77,8 +77,8 @@ http_interactions:
         & Medical Devices","matchLevel":"none","matchedWords":[]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Current","matchLevel":"none","matchedWords":[]},"primaryDesignator":{"value":"<em>PAS</em>
         <em>2050</em>:<em>2011</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2050","2011"]}}},"body_html_safe":{"value":"","matchLevel":"none","matchedWords":[]},"sku":{"value":"000000000030227173","matchLevel":"none","matchedWords":[]}}},{"title":"Assessment
         of life cycle greenhouse gas emissions - Supplementary requirements for the
-        application of PAS 2050:2011 to seafood and other aquatic food products","updated_at":"2022-01-21T08:33:35.000Z","_tags":["id:7060716880037","indexing_token:c83a10fe6c8709e5346be51fbfcf105a"],"handle":"assessment-of-life-cycle-greenhouse-gas-emissions-supplementary-requirements-for-the-application-of-pas-2050-2011-to-seafood-and-other-aquatic-food-products","vendor":"BSI
-        Shop","product_type":"fast-track-standard","template_suffix":null,"sku":"000000000030258861","barcode":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_quantity":-48,"option1":"Digital","option2":null,"option3":null,"id":7060716880037,"tags":["format:digital","has-hardcopy","Ingestion-build-48974","Ingestion-build-51215","Ingestion-build-54484"],"option_names":["title"],"variants_count":1,"variants_min_price":0.0,"variants_max_price":0.0,"variants_inventory_count":-47,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_ff6a71a9-b268-4e62-8cf5-b10b4557fff4.png?v=1632373838","published_at":"2021-09-23T06:10:35.000Z","body_html_safe":null,"variant_title":"Digital","inventory_policy":"deny","inventory_management":null,"inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":0.0,"compare_at_price":0,"price_ratio":0,"price_range":"0:10","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_ff6a71a9-b268-4e62-8cf5-b10b4557fff4.png?v=1632373838","named_tags":{},"named_tags_names":[],"created_at":"2021-09-23T06:10:35.000Z","meta":{"global":{"descriptorsAlgoliaStringArray":["Environmental
+        application of PAS 2050:2011 to seafood and other aquatic food products","updated_at":"2022-02-01T03:15:40.000Z","_tags":["id:7060716880037","indexing_token:0afc7cef1f716138316d0792b95eb926"],"handle":"assessment-of-life-cycle-greenhouse-gas-emissions-supplementary-requirements-for-the-application-of-pas-2050-2011-to-seafood-and-other-aquatic-food-products","vendor":"BSI
+        Shop","product_type":"fast-track-standard","template_suffix":null,"sku":"000000000030258861","barcode":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_quantity":-50,"option1":"Digital","option2":null,"option3":null,"id":7060716880037,"tags":["format:digital","has-hardcopy","Ingestion-build-48974","Ingestion-build-51215","Ingestion-build-54484"],"option_names":["title"],"variants_count":1,"variants_min_price":0.0,"variants_max_price":0.0,"variants_inventory_count":-49,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_ff6a71a9-b268-4e62-8cf5-b10b4557fff4.png?v=1632373838","published_at":"2021-09-23T06:10:35.000Z","body_html_safe":null,"variant_title":"Digital","inventory_policy":"deny","inventory_management":null,"inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":0.0,"compare_at_price":0,"price_ratio":0,"price_range":"0:10","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_ff6a71a9-b268-4e62-8cf5-b10b4557fff4.png?v=1632373838","named_tags":{},"named_tags_names":[],"created_at":"2021-09-23T06:10:35.000Z","meta":{"global":{"descriptorsAlgoliaStringArray":["Environmental
         engineering","Gases","Greenhouse gases","Exhaust gases","Pollutant gases","Air
         pollution","Climate","Carbon dioxide","Emission","Life cycle","Climatology","Atmosphere","Pollution
         control"],"designatedStandard":"false","icsCodesAlgoliaStringArray":["13.020.40
@@ -87,7 +87,7 @@ http_interactions:
         2050-2:2012"},"group_search":{"description":"Assessment of life cycle greenhouse
         gas emissions - Supplementary requirements for the application of PAS 2050:2011
         to seafood and other aquatic food products","member_price":0,"price":0,"title":"PAS
-        2050-2:2012"}},"recently_ordered_count":48,"objectID":"40860608430245","_highlightResult":{"title":{"value":"Assessment
+        2050-2:2012"}},"recently_ordered_count":50,"objectID":"40860608430245","_highlightResult":{"title":{"value":"Assessment
         of life cycle greenhouse gas emissions - Supplementary requirements for the
         application of <em>PAS</em> <em>2050</em>:<em>2011</em> to seafood and other
         aquatic food products","matchLevel":"full","fullyHighlighted":false,"matchedWords":["pas","2050","2011"]},"sku":{"value":"000000000030258861","matchLevel":"none","matchedWords":[]},"meta":{"global":{"descriptorsAlgoliaStringArray":[{"value":"Environmental
@@ -101,8 +101,7 @@ http_interactions:
         & Medical Devices","matchLevel":"none","matchedWords":[]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Current","matchLevel":"none","matchedWords":[]},"primaryDesignator":{"value":"<em>PAS</em>
         <em>2050</em>-2:2012","matchLevel":"partial","fullyHighlighted":false,"matchedWords":["pas","2050"]}}}}}],"nbHits":2,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"query":"PAS
         2050:2011","params":"query=PAS+2050%3A2011&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1}'
-    http_version:
-  recorded_at: Thu, 27 Jan 2022 19:22:49 GMT
+  recorded_at: Tue, 08 Feb 2022 16:49:41 GMT
 - request:
     method: post
     uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
@@ -136,7 +135,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 27 Jan 2022 19:22:50 GMT
+      - Tue, 08 Feb 2022 16:49:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -168,7 +167,7 @@ http_interactions:
       X-Shopify-Stage:
       - production
       Content-Security-Policy:
-      - frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=9c313002-99c4-407b-a366-8a4994f4acc8
+      - frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=f519809d-1b4f-4c64-915a-8b607a888ea4
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -176,11 +175,11 @@ http_interactions:
       X-Permitted-Cross-Domain-Policies:
       - none
       X-Xss-Protection:
-      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=9c313002-99c4-407b-a366-8a4994f4acc8
+      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=f519809d-1b4f-4c64-915a-8b607a888ea4
       X-Dc:
       - gcp-europe-west1,gcp-us-east1,gcp-us-east1
       X-Request-Id:
-      - 9c313002-99c4-407b-a366-8a4994f4acc8
+      - f519809d-1b4f-4c64-915a-8b607a888ea4
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
@@ -188,13 +187,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6d445a1ea985913f-ZAG
+      - 6da65a4c0bb990df-ZAG
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"productByHandle":{"createdAt":"2021-07-07T00:33:48Z","publishedAt":"2021-07-07T00:33:51Z","updatedAt":"2022-01-21T00:49:39Z","productType":"fast-track-standard","committee":null,"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
         0 580 71382 8"}}}]},"description":""}}}'
-    http_version:
-  recorded_at: Thu, 27 Jan 2022 19:22:50 GMT
-recorded_with: VCR 5.0.0
+  recorded_at: Tue, 08 Feb 2022 16:49:41 GMT
+recorded_with: VCR 6.0.0

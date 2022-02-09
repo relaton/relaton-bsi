@@ -119,13 +119,13 @@ module RelatonBsi
       # @param data [Hash]
       # @return [Array<RelatonBib::DocumentIdentifier>]
       def fetch_docid(docid, data) # rubocop:disable Metrics/AbcSize
-        ids = [{ type: "BSI", id: docid }]
+        ids = [{ type: "BSI", id: docid, primary: true }]
         if data.any? && data["variants"]["edges"][0]["node"]["isbn"]
           isbn = data["variants"]["edges"][0]["node"]["isbn"]["value"]
           ids << { type: "ISBN", id: isbn }
         end
         ids.map do |did|
-          RelatonBib::DocumentIdentifier.new(type: did[:type], id: did[:id])
+          RelatonBib::DocumentIdentifier.new(**did)
         end
       end
 
