@@ -27,10 +27,12 @@ module RelatonBsi
     # @param hits [Array<Hash>]
     # @return [Array<RelatonBsi::Hit>]
     def hits(hits) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-      hits.map do |h|
+      hits.each_with_object([]) do |h, obj|
+        next unless h[:meta][:global][:publishedDate]
+
         code = h[:meta][:global][:primaryDesignator]
           .sub(/\s(?:LOOSELEAF|\(A5 LAMINATED\)|-\sTC$)/, "")
-        Hit.new(
+        obj << Hit.new(
           {
             code: code,
             title: h[:title],

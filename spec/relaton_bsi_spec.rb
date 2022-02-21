@@ -85,6 +85,13 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  it "BS 8000-0" do
+    VCR.use_cassette "bs_8000_0" do
+      bib = RelatonBsi::BsiBibliography.get "BS 8000-0"
+      expect(bib.docidentifier[0].id).to eq "BS 8000-0"
+    end
+  end
+
   it "warns when year is wrong" do
     VCR.use_cassette "wrong_year" do
       expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
