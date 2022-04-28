@@ -62,7 +62,8 @@ module RelatonBsi
       private
 
       def fetch_ref_err(code, year, missed_years) # rubocop:disable Metrics/MethodLength
-        id = year ? "#{code}:#{year}" : code
+        y = code_parts(code)[:year]
+        id = year && !y ? "#{code}:#{year}" : code
         warn "[relaton-bsi] WARNING: no match found online for #{id}. "\
              "The code must be exactly like it is on the standards website."
         unless missed_years.empty?
