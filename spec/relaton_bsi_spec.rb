@@ -38,12 +38,29 @@ RSpec.describe RelatonBsi do
 
   it "wipe out trailing ' - TC'" do
     VCR.use_cassette "bs_en_iso_19011_2018" do
-      # file = "spec/fixtures/bs_en_iso_19011_2018.xml"
       bib = RelatonBsi::BsiBibliography.get("BS EN ISO 19011:2018")
       expect(bib.docidentifier.first.id).to eq "BS EN ISO 19011:2018"
-      # xml = bib.to_xml bibdata: true
-      # write_file file, xml
-      # expect(xml).to be_equivalent_to read_xml(file)
+    end
+  end
+
+  it "gets code without rest suffix" do
+    VCR.use_cassette "bs_5266_1" do
+      bib = RelatonBsi::BsiBibliography.get("BS 5266-1")
+      expect(bib.docidentifier.first.id).to eq "BS 5266-1"
+    end
+  end
+
+  it "code with corrigendum" do
+    VCR.use_cassette "pas_2030_2019_c2_2021" do
+      bib = RelatonBsi::BsiBibliography.get("PAS 2030:2019+C2:2021")
+      expect(bib.docidentifier.first.id).to eq "PAS 2030:2019+C2:2021"
+    end
+  end
+
+  it "drops corrigendum" do
+    VCR.use_cassette "pas_2030_2019" do
+      bib = RelatonBsi::BsiBibliography.get("PAS 2030:2019")
+      expect(bib.docidentifier.first.id).to eq "PAS 2030:2019"
     end
   end
 
@@ -71,9 +88,9 @@ RSpec.describe RelatonBsi do
     end
   end
 
-  it "BS EN ISO 14044:2006" do
-    VCR.use_cassette "bs_en_iso_14044_2006" do
-      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 14044:2006"
+  it "BS EN ISO 14044:2006+A2" do
+    VCR.use_cassette "bs_en_iso_14044_2006_a2" do
+      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 14044:2006+A2"
       expect(bib.docidentifier[0].id).to eq "BS EN ISO 14044:2006+A2:2020"
     end
   end

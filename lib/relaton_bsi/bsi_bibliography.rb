@@ -35,12 +35,28 @@ module RelatonBsi
       def get(code, year = nil, opts = {})
         # y = code.split(":")[1]
         year ||= code_parts(code)[:year]
-        ret = bib_get1(code, year, opts)
+        ret = bib_get(code, year, opts)
         return nil if ret.nil?
 
         ret = ret.to_most_recent_reference unless year || opts[:keep_year]
         # ret = ret.to_all_parts if opts[:all_parts]
         ret
+      end
+
+      #
+      # Destruct code to its parts.
+      #
+      # @param [String] code document identifier
+      #
+      # @return [MatchData] parts of the code
+      #
+      def code_parts(code)
+        %r{
+          ^(?:BSI\s)?(?<code>(?:[A-Z]+\s)*[^:\s+]+)
+          (?::(?<year>\d{4}))?
+          (?:\+(?<a>[^:\s]+)(?::(?<y>\d{4}))?)?
+          (?:\s(?<rest>.+))?
+        }x.match code
       end
 
       private
@@ -65,29 +81,19 @@ module RelatonBsi
         nil
       end
 
-      def search_filter(code) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-        # %r{^(?:BSI\s)?(?<code1>[^:]+)} =~ code
-        # %r{^(?<code1>[^:]+)} =~ code.sub(/^BSI\s/, "")
-        cp1 = code_parts code
+      #
+      # Search for a BSI standard.
+      #
+      # @param [String] code the BSI standard Code to look up
+      #
+      # @return [RelatonBsi::HitCollection] a collection of hits
+      #
+      def search_filter(code)
+        cp = code_parts code
         warn "[relaton-bsi] (\"#{code}\") fetching..."
-        return [] unless cp1
+        return [] unless cp
 
-        result = search(code)
-        result.select do |i|
-          # %r{^(?<code2>[^:]+)} =~ i.hit[:code]
-          cp2 = code_parts i.hit[:code]
-          cp2[:code] == cp1[:code] && (!cp1[:a] || cp2[:a] == cp1[:a]) &&
-            (!cp1[:y] || cp2[:y] == cp1[:y])
-        end
-      end
-
-      def code_parts(code)
-        %r{
-          ^(?:BSI\s)?(?<code>[^:]+)
-          (?::(?<year>\d{4}))?
-          (?:\+(?<a>[^:]+):)?
-          (?::(?<y>\d{4}))?
-        }x.match code
+        search(code).filter_hits!(cp)
       end
 
       # Sort through the results from Isobib, fetching them three at a time,
@@ -96,10 +102,10 @@ module RelatonBsi
       # Only expects the first page of results to be populated.
       # Does not match corrigenda etc (e.g. ISO 3166-1:2006/Cor 1:2007)
       # If no match, returns any years which caused mismatch, for error reporting
-      def isobib_results_filter(result, year)
+      def results_filter(result, year)
         missed_years = []
         result.each do |r|
-          /:(?<pyear>\d{4})/ =~ r.hit[:code]
+          pyear = code_parts(r.hit[:code])[:year]
           if !year || year == pyear
             ret = r.fetch
             return { ret: ret } if ret
@@ -110,9 +116,9 @@ module RelatonBsi
         { years: missed_years }
       end
 
-      def bib_get1(code, year, _opts)
+      def bib_get(code, year, _opts)
         result = search_filter(code) || return
-        ret = isobib_results_filter(result, year)
+        ret = results_filter(result, year)
         if ret[:ret]
           warn "[relaton-bsi] (\"#{code}\") found #{ret[:ret].docidentifier.first&.id}"
           ret[:ret]
