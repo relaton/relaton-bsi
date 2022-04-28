@@ -4,7 +4,7 @@ module RelatonBsi
       british-standard draft-for-development published-document privately-subscribed-standard
       publicly-available-specification flex-standard international-standard technical-specification
       technical-report guide international-workshop-agreement industry-technical-agreement
-      standard european-workshop-agreement
+      standard european-workshop-agreement fast-track-standard
     ].freeze
 
     SUBDOCTYPES = %w[specification method-of-test method-of-specifying vocabulary code-of-practice].freeze
