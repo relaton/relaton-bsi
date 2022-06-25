@@ -21,6 +21,7 @@
         <value>industry-technical-agreement</value>
         <value>standard</value>
         <value>european-workshop-agreement</value>
+        <value>fast-track-standard</value>
       </choice>
     </define>
     <define name="DocumentSubtype">
@@ -68,6 +69,16 @@
         <optional>
           <attribute name="uri">
             <data type="anyURI"/>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="coverpage">
+            <data type="boolean"/>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="notag">
+            <data type="boolean"/>
           </attribute>
         </optional>
         <optional>
