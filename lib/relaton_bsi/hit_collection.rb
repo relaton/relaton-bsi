@@ -55,7 +55,8 @@ module RelatonBsi
         next unless h[:meta][:global][:publishedDate]
 
         code = h[:meta][:global][:primaryDesignator]
-          .sub(/\s?(?:LOOSELEAF|\(A5 LAMINATED\)|-\s?TC$)/, "")
+        code = code.is_a?(Array) ? code.first : code
+        code.sub!(/\s?(?:LOOSELEAF|\(A5 LAMINATED\)|-\s?TC$)/, "")
         obj << Hit.new(
           {
             code: code,

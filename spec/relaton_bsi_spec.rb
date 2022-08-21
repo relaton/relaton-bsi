@@ -95,13 +95,6 @@ RSpec.describe RelatonBsi do
     end
   end
 
-  it "BS EN ISO 14044:2006+A1:2018" do
-    VCR.use_cassette "bs_en_iso_14044_2006_a1_2018" do
-      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 14044:2006+A1:2018"
-      expect(bib.docidentifier[0].id).to eq "BS EN ISO 14044:2006+A1:2018"
-    end
-  end
-
   it "BS 8000-0" do
     VCR.use_cassette "bs_8000_0" do
       bib = RelatonBsi::BsiBibliography.get "BS 8000-0"

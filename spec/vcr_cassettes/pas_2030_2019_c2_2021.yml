@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 23 Jun 2022 07:56:33 GMT
+      - Fri, 19 Aug 2022 10:54:09 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Alg-Pt:
-      - '1'
+      - '4'
       Accept-Encoding:
       - deflate, gzip
       Cache-Control:
@@ -57,15 +57,16 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"hits":[{"title":"Specification for the installation of energy efficiency
-        measures in existing dwellings and insulation in residential park homes","updated_at":"2022-05-10T10:54:15.000Z","_tags":["id:7465434841253","indexing_token:46de50f68989af53460267f74a86c86d"],"handle":"specification-for-the-installation-of-energy-efficiency-measures-in-existing-dwellings-and-insulation-in-residential-park-homes","vendor":"BSI
-        Shop","product_type":"fast-track-standard","template_suffix":null,"sku":"000000000030451522","barcode":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_quantity":-5,"option1":"Digital","option2":null,"option3":null,"id":7465434841253,"tags":["format:digital","has-hardcopy","Ingestion-build-58863"],"option_names":["title"],"variants_count":1,"variants_min_price":95.0,"variants_max_price":95.0,"variants_inventory_count":-4,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_f3130bff-b214-4164-925d-2e49fb4d9cf4.png?v=1643696405","published_at":"2022-02-01T06:20:03.000Z","body_html_safe":null,"variant_title":"Digital","inventory_policy":"deny","inventory_management":null,"inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":95.0,"compare_at_price":0,"price_ratio":0,"price_range":"75:100","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_f3130bff-b214-4164-925d-2e49fb4d9cf4.png?v=1643696405","named_tags":{},"named_tags_names":[],"created_at":"2022-02-01T06:20:03.000Z","meta":{"global":{"descriptorsAlgoliaStringArray":["Energy
+        measures in existing dwellings and insulation in residential park homes","updated_at":"2022-08-19T01:56:53.000Z","_tags":["id:7465434841253","indexing_token:b71b19189c5607b02e2b6a1b61251837"],"handle":"specification-for-the-installation-of-energy-efficiency-measures-in-existing-dwellings-and-insulation-in-residential-park-homes","vendor":"BSI
+        Shop","product_type":"fast-track-standard","template_suffix":null,"sku":"000000000030451522","barcode":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_quantity":-7,"option1":"Digital","option2":null,"option3":null,"id":7465434841253,"tags":["format:digital","has-hardcopy","Ingestion-build-58863"],"option_names":["title"],"variants_count":1,"variants_min_price":95.0,"variants_max_price":95.0,"variants_inventory_count":-7,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_f3130bff-b214-4164-925d-2e49fb4d9cf4.png?v=1643696405","published_at":"2022-02-01T06:20:03.000Z","body_html_safe":null,"variant_title":"Digital","inventory_policy":"deny","inventory_management":null,"inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":95.0,"compare_at_price":0,"price_ratio":0,"price_range":"75:100","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_f3130bff-b214-4164-925d-2e49fb4d9cf4.png?v=1643696405","named_tags":{},"named_tags_names":[],"created_at":"2022-02-01T06:20:03.000Z","meta":{"global":{"descriptorsAlgoliaStringArray":["Energy
         consumption","Energy conversion (direct)","Energy economy","Energy sources","Energy
         technology"],"designatedStandard":"false","icsCodesAlgoliaStringArray":["91.120.10
         Thermal insulation of buildings","91.140.10 Central heating systems"],"industriesAlgoliaStringArray":["Construction
-        & Building"],"publishedDate":"2019-05-01","publisher":"BSI","status":"Withdrawn","statusNumeric":100,"primaryDesignator":"PAS
-        2030:2019+C2:2021"},"group_search":{"description":"Specification for the installation
-        of energy efficiency measures in existing dwellings and insulation in residential
-        park homes","member_price":95,"price":95,"title":"PAS 2030:2019+C2:2021"}},"recently_ordered_count":5,"objectID":"41325058982053","_highlightResult":{"title":{"value":"Specification
+        & Building"],"modulesAlgoliaStringArray":["BSI_GBM48","BSI_GBM50"],"primaryDesignator":["PAS
+        2030:2019+C2:2021","PAS2030:2019+C2:2021"],"publishedDate":"2019-05-01","publisher":"BSI","status":"Withdrawn","statusNumeric":100},"group_search":{"description":"Specification
+        for the installation of energy efficiency measures in existing dwellings and
+        insulation in residential park homes","member_price":95,"price":95,"title":"PAS
+        2030:2019+C2:2021"}},"recently_ordered_count":1,"objectID":"41325058982053","_highlightResult":{"title":{"value":"Specification
         for the installation of energy efficiency measures in existing dwellings and
         insulation in residential park homes","matchLevel":"none","matchedWords":[]},"sku":{"value":"000000000030451522","matchLevel":"none","matchedWords":[]},"meta":{"global":{"descriptorsAlgoliaStringArray":[{"value":"Energy
         consumption","matchLevel":"none","matchedWords":[]},{"value":"Energy conversion
@@ -73,10 +74,10 @@ http_interactions:
         sources","matchLevel":"none","matchedWords":[]},{"value":"Energy technology","matchLevel":"none","matchedWords":[]}],"icsCodesAlgoliaStringArray":[{"value":"91.120.10
         Thermal insulation of buildings","matchLevel":"none","matchedWords":[]},{"value":"91.140.10
         Central heating systems","matchLevel":"none","matchedWords":[]}],"industriesAlgoliaStringArray":[{"value":"Construction
-        & Building","matchLevel":"none","matchedWords":[]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Withdrawn","matchLevel":"none","matchedWords":[]},"primaryDesignator":{"value":"<em>PAS</em>
-        <em>2030</em>:<em>2019</em>+<em>C2</em>:<em>2021</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2030","2019","c2","2021"]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"query":"PAS
-        2030:2019+C2:2021","params":"query=PAS+2030%3A2019%2BC2%3A2021&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1}'
-  recorded_at: Thu, 23 Jun 2022 07:56:32 GMT
+        & Building","matchLevel":"none","matchedWords":[]}],"modulesAlgoliaStringArray":[{"value":"BSI_GBM48","matchLevel":"none","matchedWords":[]},{"value":"BSI_GBM50","matchLevel":"none","matchedWords":[]}],"primaryDesignator":[{"value":"<em>PAS
+        2030</em>:<em>2019</em>+<em>C2</em>:<em>2021</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2030","2019","c2","2021"]},{"value":"<em>PAS2030</em>:<em>2019</em>+<em>C2</em>:<em>2021</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2030","2019","c2","2021"]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Withdrawn","matchLevel":"none","matchedWords":[]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"query":"PAS
+        2030:2019+C2:2021","params":"query=PAS+2030%3A2019%2BC2%3A2021&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":5,"processingTimingsMS":{"getIdx":3,"search":{"total":1},"total":5}}'
+  recorded_at: Fri, 19 Aug 2022 10:54:09 GMT
 - request:
     method: post
     uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
@@ -110,7 +111,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 23 Jun 2022 07:56:33 GMT
+      - Fri, 19 Aug 2022 10:54:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -121,57 +122,58 @@ http_interactions:
       - '164'
       X-Sorting-Hat-Shopid:
       - '55553294501'
+      X-Storefront-Renderer-Rendered:
+      - '1'
       Vary:
+      - Accept
       - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
       X-Frame-Options:
       - DENY
+      Content-Security-Policy:
+      - block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Shopify-Api-Version:
+      - 2021-10
       X-Shopid:
       - '55553294501'
       X-Shardid:
       - '164'
       Content-Language:
       - en
-      X-Shopify-Api-Version:
-      - 2021-07
-      X-Shopify-Api-Version-Warning:
-      - https://shopify.dev/concepts/about-apis/versioning
-      X-Shopify-Api-Deprecated-Reason:
-      - https://shopify.dev/api/usage/versioning#deprecation-practices
-      Strict-Transport-Security:
-      - max-age=7889238
+      Server-Timing:
+      - processing;dur=73, db;dur=44
       X-Shopify-Stage:
       - production
-      Content-Security-Policy:
-      - frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=7c25472b-fe69-45cc-85e2-912a1cee957f
-      X-Content-Type-Options:
-      - nosniff
+      X-Dc:
+      - gcp-europe-west3,us-east1,gcp-us-east1
+      X-Request-Id:
+      - 10c4266f-19a4-431c-8c56-f7f62c0cb23e
       X-Download-Options:
       - noopen
+      X-Xss-Protection:
+      - 1; mode=block
       X-Permitted-Cross-Domain-Policies:
       - none
-      X-Xss-Protection:
-      - 1; mode=block; report=/xss-report?source%5Baction%5D=query&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=api%2Fgraphql&source%5Bsection%5D=api&source%5Buuid%5D=7c25472b-fe69-45cc-85e2-912a1cee957f
-      X-Dc:
-      - gcp-europe-west3,gcp-us-central1,gcp-us-central1
-      X-Request-Id:
-      - 7c25472b-fe69-45cc-85e2-912a1cee957f
-      X-Storefront-Renderer-Verified:
-      - '1'
+      X-Content-Type-Options:
+      - nosniff
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9Zbe4ESjkocuuJMA8RRNq8PceIs7cIykXX854%2BSx%2FwgZIqsbN0VIilXE2CvQO%2FbFfnlFGMUDolzq%2FwMSjbjlDZ%2Bzvj1Bygx0GxWg7FfcJctspLXeuEBhDwT%2FV%2F4ur9qC2IfE8KUkb5s%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 71fbaaf3ee0977f2-VIE
+      - 73d2597d9d1ab01b-BEG
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"productByHandle":{"createdAt":"2022-02-01T06:20:03Z","publishedAt":"2022-02-01T06:20:06Z","updatedAt":"2022-05-10T09:55:10Z","productType":"fast-track-standard","committee":{"value":"ZZ\/1"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
+      string: '{"data":{"productByHandle":{"createdAt":"2022-02-01T06:20:03Z","publishedAt":"2022-02-01T06:20:06Z","updatedAt":"2022-08-19T00:56:53Z","productType":"fast-track-standard","committee":{"value":"ZZ/1"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
         0 539 17945 3"}}}]},"description":""}}}'
-  recorded_at: Thu, 23 Jun 2022 07:56:33 GMT
+  recorded_at: Fri, 19 Aug 2022 10:54:09 GMT
 recorded_with: VCR 6.1.0

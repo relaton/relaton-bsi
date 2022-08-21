@@ -59,8 +59,9 @@ date:
 contributor:
 - organization:
     name:
-    - British Standards Institution
-    abbreviation: BSI
+    - content: British Standards Institution
+    abbreviation:
+      content: BSI
     url: https://www.bsigroup.com/
   role:
   - publisher
@@ -85,8 +86,9 @@ docstatus:
 copyright:
 - owner:
   - name:
-    - British Standards Institution
-    abbreviation: BSI
+    - content: British Standards Institution
+    abbreviation:
+      content: BSI
     url: https://www.bsigroup.com/
   from: '2021'
 relation:
