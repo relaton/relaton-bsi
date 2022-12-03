@@ -1,6 +1,6 @@
 module RelatonBsi
   class BsiBibliographicItem < RelatonIsoBib::IsoBibliographicItem
-    TYPES = %w[
+    DOCTYPES = %w[
       british-standard draft-for-development published-document privately-subscribed-standard
       publicly-available-specification flex-standard international-standard technical-specification
       technical-report guide international-workshop-agreement industry-technical-agreement
@@ -23,6 +23,15 @@ module RelatonBsi
       super
     end
 
+    #
+    # Fetch flavor schema version
+    #
+    # @return [String] flavor schema version
+    #
+    def ext_schema
+      @ext_schema ||= schema_versions["relaton-model-bsi"]
+    end
+
     # @param opts [Hash]
     # @option opts [Nokogiri::XML::Builder] :builder XML builder
     # @option opts [Boolean] :bibdata
@@ -30,9 +39,8 @@ module RelatonBsi
     # @return [String] XML
     def to_xml(**opts) # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
       super(**opts) do |b|
-        if opts[:bibdata] && (has_ext_attrs? || price_code ||
-          !cen_processing.nil?)
-          b.ext do
+        if opts[:bibdata] && (has_ext_attrs? || price_code || !cen_processing.nil?)
+          ext = b.ext do
             b.doctype doctype if doctype
             b.horizontal horizontal unless horizontal.nil?
             editorialgroup&.to_xml b
@@ -40,6 +48,7 @@ module RelatonBsi
             structuredidentifier&.to_xml b
             b.stagename stagename if stagename
           end
+          ext["schema-version"] = ext_schema unless opts[:embeded]
         end
       end
     end

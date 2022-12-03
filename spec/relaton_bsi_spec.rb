@@ -20,7 +20,7 @@ RSpec.describe RelatonBsi do
       xml = bib.to_xml bibdata: true
       write_file file, xml
       expect(xml).to be_equivalent_to read_xml(file)
-      schema = Jing.new "spec/fixtures/isobib.rng"
+      schema = Jing.new "grammars/relaton-bsi-compile.rng"
       errors = schema.validate file
       expect(errors).to eq []
     end
@@ -105,7 +105,7 @@ RSpec.describe RelatonBsi do
   it "warns when year is wrong" do
     VCR.use_cassette "wrong_year" do
       expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
-        .to output(%r{matches found for 2021, 2017})
+        .to output(%r{matches found for 2022, 2021, 2017})
         .to_stderr
     end
   end
@@ -126,7 +126,7 @@ RSpec.describe RelatonBsi do
       expect(hit_collection.first).to be_instance_of RelatonBsi::Hit
       expect(hit_collection.to_s).to eq(
         "<RelatonBsi::HitCollection:"\
-        "#{format('%<id>#.14x', id: hit_collection.object_id << 1)} "\
+        "#{format('%<id>#.14x', id: hit_collection.object_id << 1)} " \
         "@ref=BS EN ISO 8848 @fetched=true>",
       )
     end
@@ -136,9 +136,9 @@ RSpec.describe RelatonBsi do
     VCR.use_cassette "hits" do
       hits = RelatonBsi::BsiBibliography.search("BS EN ISO 8848").fetch
       expect(hits.first.to_s).to eq(
-        "<RelatonBsi::Hit:#{format('%<id>#.14x', id: hits.first.object_id << 1)} "\
-        '@text="BS EN ISO 8848" @fetched="true" @fullIdentifier='\
-        '"BSENISO8848-2021:2021" @title="BS EN ISO 8848:2021">',
+        "<RelatonBsi::Hit:#{format('%<id>#.14x', id: hits.first.object_id << 1)} " \
+        '@text="BS EN ISO 8848" @fetched="true" @fullIdentifier=' \
+        '"BSENISO8848-2022:2022" @title="BS EN ISO 8848:2022">',
       )
     end
   end

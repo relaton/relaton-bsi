@@ -1,10 +1,10 @@
-<bibdata type="standard">
-  <fetched>2022-04-08</fetched>
+<bibdata type="standard" schema-version="v1.2.0">
+  <fetched>2022-11-22</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
-  <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems</uri>
+  <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
   <docidentifier type="BSI" primary="true">BS EN ISO 8848</docidentifier>
-  <docidentifier type="ISBN">978 0 539 02257 5</docidentifier>
+  <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
   <contributor>
     <role type="publisher"/>
     <organization>
@@ -16,10 +16,10 @@
   <language>en</language>
   <script>Latn</script>
   <status>
-    <stage>Under Review</stage>
+    <stage>Current</stage>
   </status>
   <copyright>
-    <from>2021</from>
+    <from>2022</from>
     <owner>
       <organization>
         <name>British Standards Institution</name>
@@ -30,14 +30,14 @@
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2022-04-08</fetched>
+      <fetched>2022-11-22</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
       <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
-      <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems</uri>
-      <docidentifier type="BSI" primary="true">BS EN ISO 8848:2021</docidentifier>
-      <docidentifier type="ISBN">978 0 539 02257 5</docidentifier>
+      <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
+      <docidentifier type="BSI" primary="true">BS EN ISO 8848:2022</docidentifier>
+      <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
       <date type="published">
-        <on>2021-04-30</on>
+        <on>2022-08-31</on>
       </date>
       <contributor>
         <role type="publisher"/>
@@ -49,12 +49,12 @@
       </contributor>
       <language>en</language>
       <script>Latn</script>
-      <abstract format="text/plain" language="en" script="Latn">What is ISO 8848 about? ISO 8848 discusses standards for remote mechanical steering systems for small craft. ISO 8848 specifies design, construction, installation, and test requirements for remote mechanical cable steering systems and the output ram interface point to rudders, jet drives, outboard, and sterndrive engines for small craft. ISO 8848 is applicable to three distinct classes of steering systems for use on various types of craft: Standard duty steering systems, for small craft with single and twin installations of outboard engines with a total of over 15 kW power, and with rudders, sterndrives, and water-jet drives Light-duty steering systems, for small craft with a single outboard engine of 15 kW to 40 kW power Mini jet steering systems, excluding personal watercraft Note: ISO 8848 does not address emergency means for steering the craft. Who is ISO 8848 for? ISO 8848 on remote mechanical steering systems for small craft is applicable to these entities: Maritime manufacturers Small craft manufacturers Water transport engineering Ship and marine industries Quality control professionals Why should you use ISO 8848? ISO 8848 provides you with the steering system requirements for the steering wheel, cables, steering systems, steering mechanism used on the steering systems of the craft. The guidelines provided in ISO 8848 helps you to design, construct, install and test the remote mechanical cable steering system. The steering mechanism that is intended in ISO 8848 assists you to eliminate overloading of the steering cable. You can manufacture a remote mechanical steering system that is safe to use, following the quality guidelines provided in ISO 8848. You will also lengthen the lifespan of your small craft with ISO 8848 guidelines. This can also ensure the prevention of waste. By adopting ISO 8848, you can build effective small craft and have the quality assurance to ensure that small crafts are produced according to the requirement and build trust in their use throughout the ship and marine supply chain. What’s changed since the last update? BS EN ISO 8848:2021 supersedes BS EN ISO 8848:2017. BS EN ISO 8848:2021 includes some technical changes concerning BS EN ISO 8848:2017. These include: ISO 8848:1990, ISO 9775:1990, and ISO 15652:2003 have been consolidated into this document Added "mechanical" in the title Updated definitions Updated requirements to meet current industry practices Added 7.7 regarding control lever to steering wheel clearance Steering wheel requirements and tests have been removed</abstract>
+      <abstract format="text/plain" language="en" script="Latn">1 Scope This document specifies design, construction, installation and test requirements for remote mechanical cable steering systems and the output raminterface point to rudders, jet drives, outboard and sterndrive engines for small craft. It is applicable to three distinct classes of steering systems for use on various types of craft: — standard duty steering systems, for small craft with single and twin installations of outboard engines with a total over 15 kW power, and with rudders, sterndrives and water-jet drives; — light duty steering systems, for small craft with a single outboard engine of 15 kW to 40 kW power; — mini-jet steering systems, excluding personal watercraft. NOTE Standard and light duty steering systems are mechanically interchangeable. A standard duty steering system can be used on a craft designed for a light duty system. However, a light duty steering system cannot be used on a craft that requires a standard duty steering system. Mini-jet steering systems are mechanically differentiated from the previously mentioned systems and can only be used on mini-jet craft as defined in this document. This document does not address emergency means for steering the craft.</abstract>
       <status>
-        <stage>Under Review</stage>
+        <stage>Current</stage>
       </status>
       <copyright>
-        <from>2021</from>
+        <from>2022</from>
         <owner>
           <organization>
             <name>British Standards Institution</name>
@@ -67,7 +67,7 @@
     </bibitem>
   </relation>
   <place>London</place>
-  <ext>
+  <ext schema-version="v1.0.0">
     <doctype>standard</doctype>
     <editorialgroup>
       <technical-committee>GME/33</technical-committee>
