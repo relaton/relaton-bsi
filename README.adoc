@@ -32,6 +32,7 @@ Or install it yourself as:
 [source,ruby]
 ----
 require 'relaton_bsi'
+=> true
 
 hit_collection = RelatonBsi::BsiBibliography.search("BS EN ISO 8848")
 => <RelatonBsi::HitCollection:0x007fead49fe1f8 @ref=BS EN ISO 8848 @fetched=false>
@@ -45,53 +46,14 @@ item = hit_collection[1].fetch
 [source,ruby]
 ----
 item.to_xml
-"<bibitem id="BSENISO8848-2017" type="standard">
-  <fetched>2021-04-23</fetched>
-  <title type="title-intro" format="text/plain" language="en" script="Latn">Small craft</title>
-  <title type="title-main" format="text/plain" language="en" script="Latn">Remote steering systems</title>
-  <title type="main" format="text/plain" language="en" script="Latn">Small craft - Remote steering systems</title>
-  <title type="title-main" format="text/plain" language="fr" script="Latn">Navires de plaisance. Appareils à gouverner commandés à distance</title>
-  <title type="main" format="text/plain" language="fr" script="Latn">Navires de plaisance. Appareils à gouverner commandés à distance</title>
-  <title type="title-main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
-  <title type="main" format="text/plain" language="de" script="Latn">Kleine Wasserfahrzeuge. Steueranlagen</title>
-  <uri type="src">https://shop.bsigroup.com/ProductDetail?pid=000000000030415929</uri>
-  <docidentifier type="BSI">BS EN ISO 8848:2017</docidentifier>
-  <docidentifier type="ISBN">978 0 539 13462 9</docidentifier>
-  <date type="published">
-    <on>2021-04-14</on>
-  </date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>British Standards Institution</name>
-      <abbreviation>BSI</abbreviation>
-      <uri>https://www.bsigroup.com/</uri>
-    </organization>
-  </contributor>
-  <language>en</language>
-  <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">Static loading, Testing conditions, Dimensions, Distant, Steering control devices, Specimen preparation, Deformation, Steering gear, Impact testing, Installation, Steering wheels, Fasteners, Boats, Vehicle components, Water transport engineering components, Mechanical testing </abstract>
-  <status>
-    <stage>Superseded, Withdrawn</stage>
-  </status>
-  <copyright>
-    <from>2021</from>
-    <owner>
-      <organization>
-        <name>British Standards Institution</name>
-        <abbreviation>BSI</abbreviation>
-        <uri>https://www.bsigroup.com/</uri>
-      </organization>
-    </owner>
-  </copyright>
-  <relation type="complements">
-    <bibitem type="standard">
-      <formattedref format="text/plain" language="en" script="Latn">BS EN 28848:1993</formattedref>
-      <uri type="src">https://shop.bsigroup.com/ProductDetail/?pid=000000000030046595</uri>
-    </bibitem>
-  </relation>
-  <place>London</place>
-</bibitem>"
+=> "<bibitem id="BSENISO8848-2021" type="standard" schema-version="v1.2.1">
+      <fetched>2022-12-02</fetched>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+      <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems</uri>
+      <docidentifier type="BSI" primary="true">BS EN ISO 8848:2021</docidentifier>
+      ...
+    </bibitem>"
 ----
 
 === Typed links
@@ -101,27 +63,26 @@ Each BSI document has `src` type link.
 [source,ruby]
 ----
 item.link
-=> [#<RelatonBib::TypedUri:0x00007fc02a152768 @content=#<Addressable::URI:0x576c URI:https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems>, @type="src">]
+=> [#<RelatonBib::TypedUri:0x00007fc446c4a1a0
+  @content=#<Addressable::URI:0x54d8 URI:https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems>,
+  @language=nil,
+  @script=nil,
+  @type="src">]
 ----
 
 With `bibdata: true` option XML output wrapped with `bibdata` element and `ext` element added.
 [source,ruby]
 ----
 item.to_xml bibdata: true
-"<bibdata type="standard">
-  <fetched>2021-04-23</fetched>
-  <title type="title-intro" format="text/plain" language="en" script="Latn">Small craft</title>
-  ...
-  <ext>
-    <editorialgroup>
-      <technical-committee>GME/33</technical-committee>
-    </editorialgroup>
-    <ics>
-      <code>47.080</code>
-      <text>Small craft</text>
-    </ics>
-  </ext>
-</bibdata>"
+=> "<bibdata type="standard" schema-version="v1.2.1">
+      <fetched>2022-12-02</fetched>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+      ...
+      <ext schema-version="v1.0.0">
+        <doctype>standard</doctype>
+        ...
+      </ext>
+    </bibdata>"
 ----
 
 === Get standard by code and year

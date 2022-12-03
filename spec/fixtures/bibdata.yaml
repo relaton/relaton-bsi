@@ -1,5 +1,6 @@
 ---
 id: BSENISO8848-2021
+schema-version: v1.2.1
 title:
 - type: title-main
   content: Small craft. Remote mechanical steering systems
@@ -64,7 +65,7 @@ contributor:
       content: BSI
     url: https://www.bsigroup.com/
   role:
-  - publisher
+  - type: publisher
 revdate: '2021-04-14'
 language:
 - en
@@ -143,3 +144,5 @@ editorialgroup:
 ics:
 - code: '47.080'
   text: Small craft
+ext:
+  schema-version: v1.0.0
