@@ -79,7 +79,7 @@ module RelatonBsi
           language: ["en"],
           script: ["Latn"],
           title: fetch_titles(hit.hit[:title]),
-          doctype: hit.hit[:doctype],
+          doctype: fetch_doctype(hit),
           docstatus: fetch_status(hit.hit[:status]),
           ics: fetch_ics(hit.hit[:ics]),
           date: fetch_dates(hit),
@@ -172,6 +172,21 @@ module RelatonBsi
       # @return [RelatonBib::TypedTitleStringCollection]
       def fetch_titles(title)
         RelatonBib::TypedTitleString.from_string title, "en", "Latn"
+      end
+
+      #
+      # Fetch doctype.
+      #
+      # @param [RelatonBsi::Hit] hit hit
+      #
+      # @return [String] doctype
+      #
+      def fetch_doctype(hit)
+        case hit.hit[:code]
+        when /(^|\s)Flex\s/ then "flex-standard"
+        when /(^|\s)PAS\s/ then "publicly-available-specification"
+        else hit.hit[:doctype]
+        end
       end
 
       # Fetch dates
