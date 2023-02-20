@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 07 Feb 2023 18:49:53 GMT
+      - Mon, 20 Feb 2023 18:40:18 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -76,9 +76,9 @@ http_interactions:
         Central heating systems","matchLevel":"none","matchedWords":[]}],"industriesAlgoliaStringArray":[{"value":"Construction
         & Building","matchLevel":"none","matchedWords":[]}],"modulesAlgoliaStringArray":[{"value":"BSI_GBM48","matchLevel":"none","matchedWords":[]},{"value":"BSI_GBM50","matchLevel":"none","matchedWords":[]}],"primaryDesignator":[{"value":"<em>PAS
         2030</em>:<em>2019</em>+<em>C2</em>:<em>2021</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2030","2019","c2","2021"]},{"value":"<em>PAS2030</em>:<em>2019</em>+<em>C2</em>:<em>2021</em>","matchLevel":"full","fullyHighlighted":true,"matchedWords":["pas","2030","2019","c2","2021"]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Withdrawn","matchLevel":"none","matchedWords":[]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"exhaustive":{"nbHits":true,"typo":true},"query":"PAS
-        2030:2019+C2:2021","params":"query=PAS+2030%3A2019%2BC2%3A2021&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":2,"processingTimingsMS":{"afterFetch":{"total":1},"request":{"roundTrip":104},"total":2},"serverTimeMS":2}'
+        2030:2019+C2:2021","params":"query=PAS+2030%3A2019%2BC2%3A2021&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":3,"processingTimingsMS":{"fetch":{"total":1},"getIdx":{"load":{"total":1},"total":1},"request":{"roundTrip":105},"total":3},"serverTimeMS":3}'
     http_version:
-  recorded_at: Tue, 07 Feb 2023 18:49:53 GMT
+  recorded_at: Mon, 20 Feb 2023 18:40:18 GMT
 - request:
     method: post
     uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
@@ -112,7 +112,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 07 Feb 2023 18:49:54 GMT
+      - Mon, 20 Feb 2023 18:40:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -147,32 +147,32 @@ http_interactions:
       Content-Language:
       - en
       Server-Timing:
-      - cfRequestDuration;dur=254.000187
-      - processing;dur=51, db;dur=29, asn;desc="11426", edge;desc="ATL", country;desc="US"
+      - cfRequestDuration;dur=135.999918
+      - processing;dur=49, db;dur=28, asn;desc="11426", edge;desc="IAD", country;desc="US"
       X-Shopify-Stage:
-      - production
+      - canary
       X-Dc:
-      - gcp-us-east1,gcp-us-east1,gcp-us-east1
+      - gcp-us-east4,gcp-us-east1,gcp-us-east1
       X-Request-Id:
-      - 2ab1dee7-4989-497e-aca0-d044d091cec3
-      X-Xss-Protection:
-      - 1; mode=block
+      - 4bda35d6-9b1b-4dc8-bbd3-9247571b79fa
       X-Download-Options:
       - noopen
-      X-Content-Type-Options:
-      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
       X-Permitted-Cross-Domain-Policies:
       - none
+      X-Content-Type-Options:
+      - nosniff
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BXB%2FyW3Juo%2BYXL5rMehAFr4tA5H0DvpNjST9bk80LPot4T49cyBbwh7Y3cAbSd9LAzNtQ%2FBnWEK868sWRqRviWviU%2B5p9KXtVRYb69kq7IdbRJdRJjk14zMCpjrXj4XM4N5o7rcBpYk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AfR%2FQej2jpffEcoipOpDXBNl7aDEiyYzJNHWy6DZ4noLN5%2F7cmb2hDF%2FIgLtxUJEa%2BsUaAXBPmUPCUE4if0Nz2rluty4sBsmkR%2FTt7bxIaW4jZuspcsGBrOW06Pz%2BrgN1GQ4F6QlhHA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 795e4ee00b53add1-ATL
+      - 79c95eb2bef0209a-IAD
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -180,5 +180,5 @@ http_interactions:
       string: '{"data":{"productByHandle":{"createdAt":"2022-02-01T06:20:03Z","publishedAt":"2022-02-01T06:20:06Z","updatedAt":"2023-01-30T11:20:31Z","productType":"fast-track-standard","committee":{"value":"ZZ/1"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
         0 539 17945 3"}}}]},"description":""}}}'
     http_version:
-  recorded_at: Tue, 07 Feb 2023 18:49:53 GMT
+  recorded_at: Mon, 20 Feb 2023 18:40:18 GMT
 recorded_with: VCR 5.0.0
