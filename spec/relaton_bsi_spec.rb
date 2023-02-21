@@ -161,6 +161,18 @@ RSpec.describe RelatonBsi do
     end
   end
 
+  context "fetch Expert commentary" do
+    it "full type name", vcr: { cassette_name: "excomm_full" } do
+      bib = RelatonBsi::BsiBibliography.get "BS 7273-4:2015+A1:2021 Expert commentary"
+      expect(bib.docidentifier[0].id).to eq "BS 7273-4:2015+A1:2021 ExComm"
+    end
+
+    it "short type name", vcr: { cassette_name: "excomm_short" } do
+      bib = RelatonBsi::BsiBibliography.get "BS EN ISO 13485 ExComm"
+      expect(bib.docidentifier[0].id).to eq "BS EN ISO 13485 Expert Commentary"
+    end
+  end
+
   it "could not access site" do
     index = double "algolia index"
     client = double "algolia client", init_index: index

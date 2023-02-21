@@ -11,18 +11,19 @@ module RelatonBsi
     #
     # Initialize a new HitCollection.
     #
-    # @param ref [String] reference
+    # @param reference [String] reference
     # @param year [String] year
     #
-    def initialize(ref, year = nil)
-      super ref, year
+    def initialize(reference, year = nil)
+      super reference, year
       config = Algolia::Search::Config.new(
         application_id: "575YE157G9",
         api_key: "a057b4e74099445df2eddb7940828a10",
       )
       client = Algolia::Search::Client.new config, logger: ::Logger.new($stderr)
       index = client.init_index "shopify_products"
-      resp = index.search text # , facetFilters: "product_type:standard"
+      ref = text.sub(/ExComm|Expert commentary/, "Ex")
+      resp = index.search ref # , facetFilters: "product_type:standard"
       @array = create_hits resp[:hits]
     end
 

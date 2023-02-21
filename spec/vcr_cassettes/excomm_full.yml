@@ -1,0 +1,195 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://575ye157g9-dsn.algolia.net/1/indexes/shopify_products/query
+    body:
+      encoding: UTF-8
+      string: '{"query":"BS 7273-4:2015+A1:2021 Ex"}'
+    headers:
+      User-Agent:
+      - Algolia for Ruby (2.2.5), Ruby (3.0.0)
+      X-Algolia-Api-Key:
+      - a057b4e74099445df2eddb7940828a10
+      X-Algolia-Application-Id:
+      - 575YE157G9
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 21 Feb 2023 19:43:34 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Alg-Pt:
+      - '1'
+      Accept-Encoding:
+      - deflate, gzip
+      Cache-Control:
+      - no-store
+      Access-Control-Allow-Origin:
+      - "*"
+      Timing-Allow-Origin:
+      - "*"
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Disposition:
+      - inline; filename=a.txt
+    body:
+      encoding: ASCII-8BIT
+      string: '{"hits":[{"title":"Code of practice for the operation of fire protection
+        measures. - Actuation of release mechanisms for doors","updated_at":"2022-12-30T01:58:05.000Z","_tags":["id:6976627540133","indexing_token:c65e645c522e39694ddce531b36e1741"],"handle":"code-of-practice-for-the-operation-of-fire-protection-measures-actuation-of-release-mechanisms-for-doors-2","vendor":"BSI
+        Shop","product_type":"publication","template_suffix":"","sku":"000000000030432564","barcode":null,"position":1,"requires_shipping":false,"taxable":true,"inventory_quantity":0,"option1":"Digital","option2":null,"option3":null,"id":6976627540133,"tags":["format:digital","has-hardcopy","Ingestion-build-48068","Ingestion-build-54484","Ingestion-build-89079","subscription-only"],"option_names":["title"],"variants_count":1,"variants_min_price":75.0,"variants_max_price":75.0,"variants_inventory_count":0,"product_image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_84b11753-415b-4a7b-b246-00825488926d.png?v=1628928234","published_at":"2021-08-14T09:03:52.000Z","body_html_safe":"","variant_title":"Digital","inventory_policy":"deny","inventory_management":"shopify","inventory_management_shopify":0,"inventory_available":false,"options":{"title":"Digital"},"price":75.0,"compare_at_price":37.5,"price_ratio":2.0,"price_range":"75:100","grams":0,"weight":"0.0lb","image":"https://cdn.shopify.com/s/files/1/0555/5329/4501/products/Digital_84b11753-415b-4a7b-b246-00825488926d.png?v=1628928234","named_tags":{},"named_tags_names":[],"created_at":"2021-08-14T09:03:52.000Z","meta":{"global":{"descriptorsAlgoliaStringArray":["Fire
+        alarms","Locks","Closing and check mechanisms","Fire safety in buildings","Control
+        equipment","Doors","Fire detectors","Means of escape from fire in buildings","Design","Emergency
+        exits","Manual control systems","Maintenance","Fire doors","Release mechanisms","Fire
+        safety","Actuators","Control systems","Installation","Shutters (buildings)"],"designatedStandard":"false","icsCodesAlgoliaStringArray":["13.220.20
+        Fire protection"],"industriesAlgoliaStringArray":["Fire"],"modulesAlgoliaStringArray":["BSI_GBM08"],"primaryDesignator":["BS
+        7273-4:2015+A1:2021 ExComm","BS7273-4:2015+A1:2021 ExComm","BS7273-4:2015+A1:2021ExComm","BS
+        7273-4:2015+A1:2021ExComm"],"publishedDate":"2021-01-25","publisher":"BSI","status":"Current","statusNumeric":300},"group_search":{"description":"Code
+        of practice for the operation of fire protection measures. - Actuation of
+        release mechanisms for doors","member_price":37.5,"price":75,"title":"BS 7273-4:2015+A1:2021
+        ExComm"}},"objectID":"40582591676581","_snippetResult":{"body_html_safe":{"value":"","matchLevel":"none"}},"_highlightResult":{"title":{"value":"Code
+        of practice for the operation of fire protection measures. - Actuation of
+        release mechanisms for doors","matchLevel":"none","matchedWords":[]},"sku":{"value":"000000000030432564","matchLevel":"none","matchedWords":[]},"body_html_safe":{"value":"","matchLevel":"none","matchedWords":[]},"meta":{"global":{"descriptorsAlgoliaStringArray":[{"value":"Fire
+        alarms","matchLevel":"none","matchedWords":[]},{"value":"Locks","matchLevel":"none","matchedWords":[]},{"value":"Closing
+        and check mechanisms","matchLevel":"none","matchedWords":[]},{"value":"Fire
+        safety in buildings","matchLevel":"none","matchedWords":[]},{"value":"Control
+        equipment","matchLevel":"none","matchedWords":[]},{"value":"Doors","matchLevel":"none","matchedWords":[]},{"value":"Fire
+        detectors","matchLevel":"none","matchedWords":[]},{"value":"Means of escape
+        from fire in buildings","matchLevel":"none","matchedWords":[]},{"value":"Design","matchLevel":"none","matchedWords":[]},{"value":"Emergency
+        <em>ex</em>its","matchLevel":"partial","fullyHighlighted":false,"matchedWords":["ex"]},{"value":"Manual
+        control systems","matchLevel":"none","matchedWords":[]},{"value":"Maintenance","matchLevel":"none","matchedWords":[]},{"value":"Fire
+        doors","matchLevel":"none","matchedWords":[]},{"value":"Release mechanisms","matchLevel":"none","matchedWords":[]},{"value":"Fire
+        safety","matchLevel":"none","matchedWords":[]},{"value":"Actuators","matchLevel":"none","matchedWords":[]},{"value":"Control
+        systems","matchLevel":"none","matchedWords":[]},{"value":"Installation","matchLevel":"none","matchedWords":[]},{"value":"Shutters
+        (buildings)","matchLevel":"none","matchedWords":[]}],"icsCodesAlgoliaStringArray":[{"value":"13.220.20
+        Fire protection","matchLevel":"none","matchedWords":[]}],"industriesAlgoliaStringArray":[{"value":"Fire","matchLevel":"none","matchedWords":[]}],"modulesAlgoliaStringArray":[{"value":"BSI_GBM08","matchLevel":"none","matchedWords":[]}],"primaryDesignator":[{"value":"<em>BS
+        7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021 Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021
+        Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS
+        7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Current","matchLevel":"none","matchedWords":[]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"exhaustive":{"nbHits":true,"typo":true},"query":"BS
+        7273-4:2015+A1:2021 Ex","params":"query=BS+7273-4%3A2015%2BA1%3A2021+Ex&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1,"processingTimingsMS":{"request":{"roundTrip":142}},"serverTimeMS":1}'
+    http_version:
+  recorded_at: Tue, 21 Feb 2023 19:43:34 GMT
+- request:
+    method: post
+    uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
+    body:
+      encoding: UTF-8
+      string: '{"query":"query RelatonBsi__Scrapper__Query__GetProducts($h0: String!)
+        {\n  productByHandle(handle: $h0) {\n    ...RelatonBsi__Scrapper__Product__ProductFragment\n  }\n}\n\nfragment
+        RelatonBsi__Scrapper__Product__ProductFragment on Product {\n  createdAt\n  publishedAt\n  updatedAt\n  productType\n  committee:
+        metafield(namespace: \"global\", key: \"committee\") {\n    value\n  }\n  designated:
+        metafield(namespace: \"global\", key: \"designatedStandard\") {\n    value\n  }\n  packContents:
+        metafield(namespace: \"global\", key: \"packContents\") {\n    value\n  }\n  summary:
+        metafield(namespace: \"global\", key: \"summary\") {\n    value\n  }\n  corrigendumHandle:
+        metafield(namespace: \"global\", key: \"corrigendumHandle\") {\n    value\n  }\n  variants(first:
+        250) {\n    edges {\n      node {\n        version: metafield(namespace: \"global\",
+        key: \"version\") {\n          value\n        }\n        isbn: metafield(namespace:
+        \"global\", key: \"isbn\") {\n          value\n        }\n      }\n    }\n  }\n  description\n}","variables":{"h0":"code-of-practice-for-the-operation-of-fire-protection-measures-actuation-of-release-mechanisms-for-doors-2"},"operationName":"RelatonBsi__Scrapper__Query__GetProducts"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      X-Shopify-Storefront-Access-Token:
+      - c935c196c0b7d1d86bfb5139006cfd46
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Feb 2023 19:43:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Sorting-Hat-Podid:
+      - '164'
+      X-Sorting-Hat-Shopid:
+      - '55553294501'
+      X-Storefront-Renderer-Rendered:
+      - '1'
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Shopify-Api-Version-Warning:
+      - https://shopify.dev/concepts/about-apis/versioning
+      X-Shopify-Api-Deprecated-Reason:
+      - https://shopify.dev/api/usage/versioning#deprecation-practices
+      X-Frame-Options:
+      - DENY
+      Content-Security-Policy:
+      - block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Shopify-Api-Version:
+      - 2022-01
+      X-Shopid:
+      - '55553294501'
+      X-Shardid:
+      - '164'
+      Content-Language:
+      - en
+      Server-Timing:
+      - cfRequestDuration;dur=151.000023
+      - processing;dur=68, db;dur=32, asn;desc="11426", edge;desc="IAD", country;desc="US"
+      X-Shopify-Stage:
+      - production
+      X-Dc:
+      - gcp-us-east4,gcp-us-east1,gcp-us-east1
+      X-Request-Id:
+      - 9e4309bd-527a-49eb-ac29-847f43f6b7c0
+      X-Download-Options:
+      - noopen
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Content-Type-Options:
+      - nosniff
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DnbGEgu%2FYVU9ff%2BlvKatg4xsQ6aYYYaUwfd3zoW7DzSwQ8wakjoii%2Bar0zNuue5EhUU2UOfoeZFTjYZ74XjQ87A%2BJXh2JLlgr0WB25VfAt5xv35iEKW9qH2cu75ODjwgABccbY4oqdk%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 79d1f8c21e2d828d-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"productByHandle":{"createdAt":"2021-08-14T08:03:52Z","publishedAt":"2021-08-14T08:03:55Z","updatedAt":"2022-12-30T01:58:05Z","productType":"publication","committee":{"value":"FSH/12/4"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
+        0 539 16669 9"}}}]},"description":""}}}'
+    http_version:
+  recorded_at: Tue, 21 Feb 2023 19:43:34 GMT
+recorded_with: VCR 5.0.0
