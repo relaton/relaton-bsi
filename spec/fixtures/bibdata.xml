@@ -1,11 +1,11 @@
 <bibdata type="standard" schema-version="v1.2.1">
-  <fetched>2023-02-21</fetched>
+  <fetched>2023-02-22</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
   <docidentifier type="BSI" primary="true">BS EN ISO 8848</docidentifier>
   <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
-  <docnumber>8848:2022</docnumber>
+  <docnumber>8848</docnumber>
   <contributor>
     <role type="publisher"/>
     <organization>
@@ -31,13 +31,13 @@
   </copyright>
   <relation type="instance">
     <bibitem type="standard">
-      <fetched>2023-02-21</fetched>
+      <fetched>2023-02-22</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
       <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
       <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
       <docidentifier type="BSI" primary="true">BS EN ISO 8848:2022</docidentifier>
       <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
-      <docnumber>8848:2022</docnumber>
+      <docnumber>8848</docnumber>
       <date type="published">
         <on>2022-08-31</on>
       </date>

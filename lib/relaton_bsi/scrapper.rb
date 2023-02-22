@@ -76,7 +76,7 @@ module RelatonBsi
           fetched: Date.today.to_s,
           type: "standard",
           docid: fetch_docid(hit.hit[:code], data),
-          docnumber: hit.hit[:code].match(/\d+\S+/).to_s,
+          docnumber: hit.hit[:code].match(/\d+/).to_s,
           language: ["en"],
           script: ["Latn"],
           title: fetch_titles(hit.hit[:title]),
