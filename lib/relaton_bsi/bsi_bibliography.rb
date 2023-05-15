@@ -52,7 +52,7 @@ module RelatonBsi
       #
       def code_parts(code)
         %r{
-          ^(?:BSI\s)?(?<code>(?:[A-Z]+\s)*[^:\s+]+)
+          ^(?:BSI\s)?(?<code>(?:[A-Z]+\s)*[^:\s+]+(?:\s\d+)?)
           (?::(?<year>\d{4}))?
           (?:\+(?<a>[^:\s]+)(?::(?<y>\d{4}))?)?
           (?:\s(?<rest>.+))?

@@ -51,17 +51,17 @@ RSpec.describe RelatonBsi do
   end
 
   it "code with corrigendum" do
-    VCR.use_cassette "pas_2030_2019_c2_2021" do
-      bib = RelatonBsi::BsiBibliography.get("PAS 2030:2019+C2:2021")
-      expect(bib.docidentifier.first.id).to eq "PAS 2030:2019+C2:2021"
+    VCR.use_cassette "code_with_corrigendum" do
+      bib = RelatonBsi::BsiBibliography.get("PAS 2035/2030:2019+A1:2022")
+      expect(bib.docidentifier.first.id).to eq "PAS 2035/2030:2019+A1:2022"
       expect(bib.doctype).to eq "publicly-available-specification"
     end
   end
 
   it "drops corrigendum" do
-    VCR.use_cassette "pas_2030_2019" do
-      bib = RelatonBsi::BsiBibliography.get("PAS 2030:2019")
-      expect(bib.docidentifier.first.id).to eq "PAS 2030:2019"
+    VCR.use_cassette "drops_corrigendum" do
+      bib = RelatonBsi::BsiBibliography.get("PAS 2031:2019")
+      expect(bib.docidentifier.first.id).to eq "PAS 2031:2019"
       expect(bib.doctype).to eq "publicly-available-specification"
     end
   end

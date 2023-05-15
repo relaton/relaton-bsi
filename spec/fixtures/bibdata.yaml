@@ -1,6 +1,6 @@
 ---
 id: BSENISO8848-2021
-schema-version: v1.2.1
+schema-version: v1.2.3
 title:
 - type: title-main
   content: Small craft. Remote mechanical steering systems
@@ -145,4 +145,4 @@ ics:
 - code: '47.080'
   text: Small craft
 ext:
-  schema-version: v1.0.0
+  schema-version: v1.0.2

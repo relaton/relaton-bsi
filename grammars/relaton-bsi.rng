@@ -17,9 +17,6 @@
       <optional>
         <ref name="stagename"/>
       </optional>
-      <zeroOrMore>
-        <ref name="coverimages"/>
-      </zeroOrMore>
     </define>
     <define name="bdate">
       <element name="date">
@@ -98,6 +95,7 @@
         <value>standard</value>
         <value>european-workshop-agreement</value>
         <value>fast-track-standard</value>
+        <value>expert-commentary</value>
       </choice>
     </define>
     <define name="DocumentSubtype">
