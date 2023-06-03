@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 14 May 2023 15:53:16 GMT
+      - Sat, 03 Jun 2023 18:00:52 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -87,9 +87,9 @@ http_interactions:
         7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021 Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021
         Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS
         7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Current","matchLevel":"none","matchedWords":[]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"exhaustive":{"nbHits":true,"typo":true},"query":"BS
-        7273-4:2015+A1:2021 Ex","params":"query=BS+7273-4%3A2015%2BA1%3A2021+Ex&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1,"processingTimingsMS":{"request":{"roundTrip":126}}}'
+        7273-4:2015+A1:2021 Ex","params":"query=BS+7273-4%3A2015%2BA1%3A2021+Ex&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1,"processingTimingsMS":{"request":{"roundTrip":105},"total":1},"serverTimeMS":1}'
     http_version:
-  recorded_at: Sun, 14 May 2023 15:53:16 GMT
+  recorded_at: Sat, 03 Jun 2023 18:00:52 GMT
 - request:
     method: post
     uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
@@ -123,7 +123,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 May 2023 15:53:16 GMT
+      - Sat, 03 Jun 2023 18:00:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -157,16 +157,19 @@ http_interactions:
       - '164'
       Content-Language:
       - en
+      Powered-By:
+      - Shopify
       Server-Timing:
-      - cfRequestDuration;dur=90.000153
-      - processing;dur=50, db;dur=30, asn;desc="11426", edge;desc="ATL", country;desc="US",
-        graphql;desc="storefront/query/other"
+      - cfRequestDuration;dur=78.000069
+      - processing;dur=47;desc="gc:1", db;dur=30, asn;desc="11426", edge;desc="ATL",
+        country;desc="US", servedBy;desc="zrhk", graphql;desc="storefront/query/other",
+        requestID;desc="43decb97-cf13-491d-ad46-fa9331388b14"
       X-Shopify-Stage:
       - production
       X-Dc:
       - gcp-us-east1,gcp-us-east1,gcp-us-east1
       X-Request-Id:
-      - f66c2cad-cb17-4cf3-aae5-562a351a9ed7
+      - 43decb97-cf13-491d-ad46-fa9331388b14
       X-Download-Options:
       - noopen
       X-Content-Type-Options:
@@ -178,19 +181,19 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RTbn0L07SZcrCOG76zGFc1bq26E0b4dOSF7NxjirWCDwMD8Ii3%2BMBDegpopnqpk%2BRdDiMJGEwqa0BpvUIOx78hTFH%2BxY%2FSbvOXojXpsAvPeFj1iclTi5YrplC%2BcDmhzBTdMQlPdxpAs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IRRj%2BJi6Sn49IwQx4WSCFuK1ypExApOiEq8bmFAD8Yk0ShF7NgOXyPrDGR5qA%2F7kNq6g2ih6Y5oi0P%2FJa7m84EsaCZr61hJAUjFn7T3fJG1bzUwDiO2fBa49Ssx4awRLY2WYTGBHnE0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7c7450242e0eb0c3-ATL
+      - 7d19d691aeda2436-ATL
       Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"productByHandle":{"createdAt":"2021-08-14T08:03:52Z","publishedAt":"2021-08-14T08:03:55Z","updatedAt":"2023-03-10T14:38:41Z","productType":"publication","committee":{"value":"FSH/12/4"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
         0 539 16669 9"}}}]},"description":""}}}'
     http_version:
-  recorded_at: Sun, 14 May 2023 15:53:16 GMT
+  recorded_at: Sat, 03 Jun 2023 18:00:52 GMT
 recorded_with: VCR 5.0.0
