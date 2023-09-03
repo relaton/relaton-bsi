@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ribose Inc."]
   spec.email         = ["open.source@ribose.com"]
 
-  spec.summary       = "RelatonBsi: retrieve BSI Standards for bibliographic use "\
-                       "using the BibliographicItem model"
-  spec.description   = "RelatonBsi: retrieve BSI Standards for bibliographic use "\
-                       "using the BibliographicItem model"
+  spec.summary       = "RelatonBsi: retrieve BSI Standards for bibliographic " \
+                       "use using the BibliographicItem model"
+  spec.description   = "RelatonBsi: retrieve BSI Standards for bibliographic " \
+                       "use using the BibliographicItem model"
   spec.homepage      = "https://github.com/metanorma/relaton-bsi"
   spec.license       = "BSD-2-Clause"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
@@ -32,6 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "algolia", "~> 2.3.0"
   spec.add_dependency "graphql", "1.13.6"
   spec.add_dependency "graphql-client", "~> 0.16.0"
-  # spec.add_dependency "mechanize", "~> 2.8.0"
-  spec.add_dependency "relaton-iso-bib", "~> 1.14.0"
+  spec.add_dependency "relaton-iso-bib", "~> 1.16.0"
 end
