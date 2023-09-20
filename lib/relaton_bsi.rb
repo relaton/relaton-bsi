@@ -1,7 +1,16 @@
 # frozen_string_literal: true
 
+require "relaton_iso_bib"
 require_relative "relaton_bsi/version"
+require "relaton_bsi/config"
+require "relaton_bsi/util"
 require "relaton_bsi/bsi_bibliography"
+require "relaton_bsi/bsi_bibliographic_item"
+require "relaton_bsi/scrapper"
+require "relaton_bsi/hit_collection"
+require "relaton_bsi/hit"
+require "relaton_bsi/xml_parser"
+require "relaton_bsi/hash_converter"
 
 module RelatonBsi
   # Returns hash of XML greammar

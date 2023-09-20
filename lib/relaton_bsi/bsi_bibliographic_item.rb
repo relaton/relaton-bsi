@@ -11,8 +11,8 @@ module RelatonBsi
 
     def initialize(**args) # rubocop:disable Metrics/AbcSize
       if args[:subdoctype] && !SUBDOCTYPES.include?(args[:subdoctype])
-        warn "[relaton-bsi] WARNING: invalid subdoctype: #{args[:subdoctype]}"
-        warn "[relaton-bsi] Allowed subdoctypes are: #{SUBDOCTYPES.join(', ')}"
+        Util.warn "WARNING: invalid subdoctype: `#{args[:subdoctype]}`"
+        Util.warn "Allowed subdoctypes are: `#{SUBDOCTYPES.join('`, `')}`"
       end
       super
     end

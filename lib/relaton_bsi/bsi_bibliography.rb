@@ -1,14 +1,5 @@
 # frozen_string_literal: true
 
-# require "mechanize"
-require "relaton_iso_bib"
-require "relaton_bsi/bsi_bibliographic_item"
-require "relaton_bsi/scrapper"
-require "relaton_bsi/hit_collection"
-require "relaton_bsi/hit"
-require "relaton_bsi/xml_parser"
-require "relaton_bsi/hash_converter"
-
 module RelatonBsi
   # Class methods for search ISO standards.
   class BsiBibliography
@@ -64,11 +55,11 @@ module RelatonBsi
       def fetch_ref_err(code, year, missed_years) # rubocop:disable Metrics/MethodLength
         y = code_parts(code)[:year]
         id = year && !y ? "#{code}:#{year}" : code
-        warn "[relaton-bsi] WARNING: no match found online for #{id}. "\
-             "The code must be exactly like it is on the standards website."
+        Util.warn "WARNING: no match found online for `#{id}`. " \
+                  "The code must be exactly like it is on the standards website."
         unless missed_years.empty?
-          warn "[relaton-bsi] (There was no match for #{year}, though there "\
-               "were matches found for #{missed_years.join(', ')}.)"
+          Util.warn "(There was no match for `#{year}`, though there " \
+                    "were matches found for `#{missed_years.join('`, `')}`.)"
         end
         # if /\d-\d/.match? code
         #   warn "[relaton-bsi] The provided document part may not exist, or "\
@@ -91,7 +82,7 @@ module RelatonBsi
       #
       def search_filter(code)
         cp = code_parts code
-        warn "[relaton-bsi] (\"#{code}\") fetching..."
+        Util.warn "(#{code}) fetching..."
         return [] unless cp
 
         search(code).filter_hits!(cp)
@@ -121,7 +112,7 @@ module RelatonBsi
         result = search_filter(code) || return
         ret = results_filter(result, year)
         if ret[:ret]
-          warn "[relaton-bsi] (\"#{code}\") found #{ret[:ret].docidentifier.first&.id}"
+          Util.warn "(#{code}) found `#{ret[:ret].docidentifier.first&.id}`"
           ret[:ret]
         else
           fetch_ref_err(code, year, ret[:years])
