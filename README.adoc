@@ -27,13 +27,24 @@ Or install it yourself as:
 
 == Usage
 
-=== Search for a standard using keywords
+=== Configuration
+
+Configuration is optional. The available option is `logger` which is a `Logger` instance. By default, the logger is `Logger.new($stderr)` with `Logger::WARN` level. To change the logger level, use `RelatonBsi.configure` block.
 
 [source,ruby]
 ----
 require 'relaton_bsi'
 => true
 
+RelatonBsi.configure do |config|
+  config.logger.level = Logger::DEBUG
+end
+----
+
+=== Search for a standard using keywords
+
+[source,ruby]
+----
 hit_collection = RelatonBsi::BsiBibliography.search("BS EN ISO 8848")
 => <RelatonBsi::HitCollection:0x007fead49fe1f8 @ref=BS EN ISO 8848 @fetched=false>
 
@@ -89,14 +100,14 @@ item.to_xml bibdata: true
 [source,ruby]
 ----
 RelatonBsi::BsiBibliography.get "BS EN ISO 8848:2021"
-[relaton-bsi] ("BS EN ISO 8848:2021") fetching...
-[relaton-bsi] ("BS EN ISO 8848:2021") found BS EN ISO 8848:2021
+[relaton-bsi] (BS EN ISO 8848:2021) fetching...
+[relaton-bsi] (BS EN ISO 8848:2021) found `BS EN ISO 8848:2021`
 => #<RelatonBsi::BsiBibliographicItem:0x007feb14814ca8
 ...
 
 RelatonBsi::BsiBibliography.get "BS EN ISO 8848", "2021"
-[relaton-bsi] ("BS EN ISO 8848") fetching...
-[relaton-bsi] ("BS EN ISO 8848") found BS EN ISO 8848:2021
+[relaton-bsi] (BS EN ISO 8848) fetching...
+[relaton-bsi] (BS EN ISO 8848) found `BS EN ISO 8848:2021`
 => #<RelatonBsi::BsiBibliographicItem:0x007feaf59188a8
 ...
 ----
