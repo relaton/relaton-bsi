@@ -10,7 +10,7 @@ module RelatonBsi
     end
 
     # @param code [String]
-    # @param date [String, NilClass] year
+    # @param date [String, nil] year
     # @param opts [Hash]
     # @return [RelatonBsi::BsiBibliographicItem]
     def get(code, date, opts)

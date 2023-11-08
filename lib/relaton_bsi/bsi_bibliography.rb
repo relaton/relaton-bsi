@@ -53,10 +53,10 @@ module RelatonBsi
       private
 
       def fetch_ref_err(code, year, missed_years) # rubocop:disable Metrics/MethodLength
-        y = code_parts(code)[:year]
-        id = year && !y ? "#{code}:#{year}" : code
-        Util.warn "WARNING: no match found online for `#{id}`. " \
-                  "The code must be exactly like it is on the standards website."
+        # y = code_parts(code)[:year]
+        # id = year && !y ? "#{code}:#{year}" : code
+        # Util.warn "WARNING: no match found online for `#{id}`. " \
+        #           "The code must be exactly like it is on the standards website."
         unless missed_years.empty?
           Util.warn "There was no match for `#{year}`, though there " \
                     "were matches found for `#{missed_years.join('`, `')}`."
