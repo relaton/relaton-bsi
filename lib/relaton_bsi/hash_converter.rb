@@ -1,16 +1,21 @@
 module RelatonBsi
-  class HashConverter < RelatonIsoBib::HashConverter
-    class << self
-      private
+  module HashConverter
+    include RelatonIsoBib::HashConverter
+    extend self
 
-      #
-      # Ovverides superclass's method
-      #
-      # @param item [Hash]
-      # @retirn [RelatonBsi::BsiBibliographicItem]
-      def bib_item(item)
-        BsiBibliographicItem.new(**item)
-      end
+    private
+
+    #
+    # Ovverides superclass's method
+    #
+    # @param item [Hash]
+    # @retirn [RelatonBsi::BsiBibliographicItem]
+    def bib_item(item)
+      BsiBibliographicItem.new(**item)
+    end
+
+    def create_doctype(**args)
+      DocumentType.new(**args)
     end
   end
 end

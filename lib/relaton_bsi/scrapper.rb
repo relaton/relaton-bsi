@@ -183,6 +183,10 @@ module RelatonBsi
       # @return [String] doctype
       #
       def fetch_doctype(hit)
+        DocumentType.new(type: doctype(hit))
+      end
+
+      def doctype(hit)
         case hit.hit[:code]
         when /(^|\s)Flex\s/ then "flex-standard"
         when /(^|\s)PAS\s/ then "publicly-available-specification"

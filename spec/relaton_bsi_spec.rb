@@ -56,7 +56,7 @@ RSpec.describe RelatonBsi do
     VCR.use_cassette "code_with_corrigendum" do
       bib = RelatonBsi::BsiBibliography.get("PAS 2035/2030:2019+A1:2022")
       expect(bib.docidentifier.first.id).to eq "PAS 2035/2030:2019+A1:2022"
-      expect(bib.doctype).to eq "publicly-available-specification"
+      expect(bib.doctype.type).to eq "publicly-available-specification"
     end
   end
 
@@ -64,7 +64,7 @@ RSpec.describe RelatonBsi do
     VCR.use_cassette "drops_corrigendum" do
       bib = RelatonBsi::BsiBibliography.get("PAS 2031:2019")
       expect(bib.docidentifier.first.id).to eq "PAS 2031:2019"
-      expect(bib.doctype).to eq "publicly-available-specification"
+      expect(bib.doctype.type).to eq "publicly-available-specification"
     end
   end
 
@@ -82,14 +82,14 @@ RSpec.describe RelatonBsi do
     VCR.use_cassette "pas_2050_2011" do
       bib = RelatonBsi::BsiBibliography.get "PAS 2050:2011"
       expect(bib.docidentifier[0].id).to eq "PAS 2050:2011"
-      expect(bib.doctype).to eq "publicly-available-specification"
+      expect(bib.doctype.type).to eq "publicly-available-specification"
     end
   end
 
   it "gets Flex", vcr: { cassette_name: "flex_0" } do
     bib = RelatonBsi::BsiBibliography.get "BSI Flex 0"
     expect(bib.docidentifier[0].id).to eq "BSI Flex 0 v2.0-08"
-    expect(bib.doctype).to eq "flex-standard"
+    expect(bib.doctype.type).to eq "flex-standard"
   end
 
   it "BS EN ISO 9001" do
