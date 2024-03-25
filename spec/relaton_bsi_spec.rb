@@ -3,8 +3,6 @@
 require "jing"
 
 RSpec.describe RelatonBsi do
-  before { RelatonBsi.instance_variable_set :@configuration, nil }
-
   it "has a version number" do
     expect(RelatonBsi::VERSION).not_to be nil
   end
@@ -117,7 +115,7 @@ RSpec.describe RelatonBsi do
     VCR.use_cassette "wrong_year" do
       expect { RelatonBsi::BsiBibliography.get("BS EN ISO 8848", "2018", {}) }
         .to output(%r{matches found for `2022`, `2021`, `2017`})
-        .to_stderr
+        .to_stderr_from_any_process
     end
   end
 

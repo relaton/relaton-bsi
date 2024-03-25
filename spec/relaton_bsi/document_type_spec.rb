@@ -9,7 +9,7 @@ describe RelatonBsi::DocumentType do
     it "incorrect" do
       expect do
         RelatonBsi::DocumentType.new type: "type"
-      end.to output(/\[relaton-bsi\] WARNING: invalid doctype: `type`/).to_stderr_from_any_process
+      end.to output(/\[relaton-bsi\] WARN: invalid doctype: `type`/).to_stderr_from_any_process
     end
   end
 end

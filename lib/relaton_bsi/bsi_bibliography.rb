@@ -58,7 +58,7 @@ module RelatonBsi
         # Util.warn "WARNING: no match found online for `#{id}`. " \
         #           "The code must be exactly like it is on the standards website."
         unless missed_years.empty?
-          Util.warn "There was no match for `#{year}`, though there " \
+          Util.info "There was no match for `#{year}`, though there " \
                     "were matches found for `#{missed_years.join('`, `')}`."
         end
         # if /\d-\d/.match? code
@@ -82,9 +82,9 @@ module RelatonBsi
       #
       def search_filter(code)
         cp = code_parts code
-        Util.warn "(#{code}) Fetching from shop.bsigroup.com ..."
+        Util.info "Fetching from shop.bsigroup.com ...", key: code
         unless cp
-          Util.warn "(#{code}) Could not parse the reference"
+          Util.info "Could not parse the reference", key: code
           return []
         end
 
@@ -115,10 +115,10 @@ module RelatonBsi
         result = search_filter(code) || return
         ret = results_filter(result, year)
         if ret[:ret]
-          Util.warn "(#{code}) Found: `#{ret[:ret].docidentifier.first&.id}`"
+          Util.info "Found: `#{ret[:ret].docidentifier.first&.id}`", key: code
           ret[:ret]
         else
-          Util.warn "(#{code}) No found"
+          Util.info "No found", key: code
           fetch_ref_err(code, year, ret[:years])
         end
       end
