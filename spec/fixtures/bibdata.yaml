@@ -1,6 +1,6 @@
 ---
 id: BSENISO8848-2021
-schema-version: v1.2.8
+schema-version: v1.3.0
 title:
 - type: title-main
   content: Small craft. Remote mechanical steering systems
@@ -8,42 +8,36 @@ title:
   - en
   script:
   - Latn
-  format: text/plain
 - type: main
   content: Small craft. Remote mechanical steering systems
   language:
   - en
   script:
   - Latn
-  format: text/plain
 - type: title-main
   content: Petits navires. Appareils à gouverner commandés à distance
   language:
   - fr
   script:
   - Latn
-  format: text/plain
 - type: main
   content: Petits navires. Appareils à gouverner commandés à distance
   language:
   - fr
   script:
   - Latn
-  format: text/plain
 - type: title-main
   content: Kleine Wasserfahrzeuge. Steueranlagen
   language:
   - de
   script:
   - Latn
-  format: text/plain
 - type: main
   content: Kleine Wasserfahrzeuge. Steueranlagen
   language:
   - de
   script:
   - Latn
-  format: text/plain
 link:
 - content: https://shop.bsigroup.com/ProductDetail?pid=000000000030382851
   type: src
@@ -80,17 +74,17 @@ abstract:
   - en
   script:
   - Latn
-  format: text/plain
 docstatus:
   stage:
     value: Current
 copyright:
 - owner:
-  - name:
-    - content: British Standards Institution
-    abbreviation:
-      content: BSI
-    url: https://www.bsigroup.com/
+  - organization:
+      name:
+      - content: British Standards Institution
+      abbreviation:
+        content: BSI
+      url: https://www.bsigroup.com/
   from: '2021'
 relation:
 - type: complements
@@ -100,13 +94,7 @@ relation:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030415929
       type: src
     type: standard
-    formattedref:
-      content: BS EN ISO 8848:2017
-      language:
-      - en
-      script:
-      - Latn
-      format: text/plain
+    formattedref: BS EN ISO 8848:2017
 - type: complements
   bibitem:
     id: BSENISO9775-2017
@@ -114,13 +102,7 @@ relation:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352033
       type: src
     type: standard
-    formattedref:
-      content: BS EN ISO 9775:2017
-      language:
-      - en
-      script:
-      - Latn
-      format: text/plain
+    formattedref: BS EN ISO 9775:2017
 - type: complements
   bibitem:
     id: BSENISO15652-2017
@@ -128,13 +110,7 @@ relation:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352021
       type: src
     type: standard
-    formattedref:
-      content: BS EN ISO 15652:2017
-      language:
-      - en
-      script:
-      - Latn
-      format: text/plain
+    formattedref: BS EN ISO 15652:2017
 place:
 - London
 fetched: '2021-04-20'
