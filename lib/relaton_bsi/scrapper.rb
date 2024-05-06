@@ -112,7 +112,7 @@ module RelatonBsi
       def fetch_abstract(data)
         return [] unless data["description"]
 
-        [{ content: data["description"], language: "en", script: "Latn" }]
+        [RelatonBib::Abstract.new(content: data["description"], language: "en", script: "Latn")]
       end
 
       # Fetch docid.
@@ -172,7 +172,7 @@ module RelatonBsi
       # @param title [String]
       # @return [RelatonBib::TypedTitleStringCollection]
       def fetch_titles(title)
-        RelatonBib::TypedTitleString.from_string title, "en", "Latn"
+        RelatonBib::TypedTitleString.from_string title, lang: "en", script: "Latn"
       end
 
       #
@@ -222,7 +222,7 @@ module RelatonBsi
       # @param hit [RelatonBsi::Hit]
       # @return [Array<Hash>]
       def fetch_copyright(hit)
-        owner = owner_entity hit
+        owner = RelatonBib::Organization.new(**owner_entity(hit))
         from = Date.parse(hit.hit[:date]).year.to_s
         [{ owner: [owner], from: from }]
       end
