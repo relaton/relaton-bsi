@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 17 Mar 2024 01:13:44 GMT
+      - Sat, 18 May 2024 03:53:15 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -87,8 +87,8 @@ http_interactions:
         7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021 Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021
         Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]},{"value":"<em>BS
         7273</em>-<em>4</em>:<em>2015</em>+<em>A1</em>:<em>2021Ex</em>Comm","matchLevel":"full","fullyHighlighted":false,"matchedWords":["bs","7273","4","2015","a1","2021","ex"]}],"publisher":{"value":"BSI","matchLevel":"none","matchedWords":[]},"status":{"value":"Current","matchLevel":"none","matchedWords":[]}}}}}],"nbHits":1,"page":0,"nbPages":1,"hitsPerPage":20,"exhaustiveNbHits":true,"exhaustiveTypo":true,"exhaustive":{"nbHits":true,"typo":true},"query":"BS
-        7273-4:2015+A1:2021 Ex","params":"query=BS+7273-4%3A2015%2BA1%3A2021+Ex&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1,"processingTimingsMS":{"_request":{"roundTrip":132}},"serverTimeMS":1}'
-  recorded_at: Sun, 17 Mar 2024 01:13:44 GMT
+        7273-4:2015+A1:2021 Ex","params":"query=BS+7273-4%3A2015%2BA1%3A2021+Ex&distinct=1&filters=NOT+tags%3Ahas-digital&filters=NOT+tags%3Anot-for-sale&filters=NOT+product_type%3Amembership","renderingContent":{},"processingTimeMS":1,"processingTimingsMS":{"_request":{"roundTrip":139},"total":1},"serverTimeMS":1}'
+  recorded_at: Sat, 18 May 2024 03:53:15 GMT
 - request:
     method: post
     uri: https://shop-bsi.myshopify.com/api/2021-04/graphql.json
@@ -122,7 +122,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 17 Mar 2024 01:13:44 GMT
+      - Sat, 18 May 2024 03:53:15 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -138,8 +138,6 @@ http_interactions:
       Vary:
       - Accept
       - Accept-Encoding
-      X-Shopify-Api-Version-Warning:
-      - https://shopify.dev/concepts/about-apis/versioning
       X-Shopify-Api-Deprecated-Reason:
       - https://shopify.dev/api/usage/versioning#deprecation-practices
       X-Frame-Options:
@@ -149,7 +147,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Shopify-Api-Version:
-      - 2023-04
+      - 2023-07
       X-Shopid:
       - '55553294501'
       X-Shardid:
@@ -159,40 +157,38 @@ http_interactions:
       Powered-By:
       - Shopify
       Server-Timing:
-      - cfRequestDuration;dur=92.000008
+      - cfRequestDuration;dur=111.000061
       - ipv6
-      - processing;dur=53;desc="gc:2", db;dur=27, asn;desc="7018", edge;desc="ATL",
-        country;desc="US", servedBy;desc="bfpb", graphql;desc="storefront/query/other",
-        requestID;desc="4fade9ff-e227-43c6-9e4c-e74cc469754a-1710638024"
-      X-Shopify-Stage:
-      - production
+      - processing;dur=54;desc="gc:2", db;dur=25, asn;desc="7018", edge;desc="ATL",
+        country;desc="US", servedBy;desc="qrhb", graphql;desc="storefront/query/other",
+        gqlSelectionNames;desc="sfr/productByHandle", requestID;desc="f5faa730-4924-4b08-bde2-a6d88d4f4039-1716004395"
       X-Dc:
       - gcp-us-east1,gcp-us-east1,gcp-us-east1
       X-Request-Id:
-      - 4fade9ff-e227-43c6-9e4c-e74cc469754a-1710638024
-      X-Download-Options:
-      - noopen
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      X-Content-Type-Options:
-      - nosniff
+      - f5faa730-4924-4b08-bde2-a6d88d4f4039-1716004395
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=f5XGtw7eDvBSi57U2cb7H3n3Zic9S8c6QOid%2BPZeOWFHaehER%2BpLwJk6%2BUD6z6Kjj%2BN5ElGFCLN79No%2FwgPHUH9kOFGMdfkeooHpKiOppUk%2BUUU4DZX%2FIOhzuqaJKteBENhrUt%2FH8TadAubEHRLKwjDOoKo%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=TEx%2FSTGZV4dkpwQuwOPk%2FkO%2BWfuw1cSeDnaCak3b%2BzY6UMEo5IiH4aLYZ2QyKDv%2Fs%2FcEniLhhzDBFwQIkmON2J5DQR7XBjMlFmGDr7DfQOxr2jbhZAT3M63dbV7f3Pz%2F3uHy9grTWg6Vs%2FyaQed4fL8SVmU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Download-Options:
+      - noopen
       Server:
       - cloudflare
       Cf-Ray:
-      - 86591f43de9c8bb8-ATL
+      - 8858e62fccc0135d-ATL
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"productByHandle":{"createdAt":"2021-08-14T08:03:52Z","publishedAt":"2024-01-13T17:18:48Z","updatedAt":"2024-01-13T17:18:58Z","productType":"publication","committee":{"value":"FSH/12/4"},"designated":{"value":"false"},"packContents":null,"summary":null,"corrigendumHandle":null,"variants":{"edges":[{"node":{"version":{"value":"basic"},"isbn":{"value":"978
         0 539 16669 9"}}}]},"description":""}}}'
-  recorded_at: Sun, 17 Mar 2024 01:13:44 GMT
+  recorded_at: Sat, 18 May 2024 03:53:15 GMT
 recorded_with: VCR 6.2.0
