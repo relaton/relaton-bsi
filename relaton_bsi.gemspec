@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "algolia", "~> 2.3.0"
   spec.add_dependency "faraday-net_http_persistent", "~> 2.0"
-  spec.add_dependency "graphql", "1.13.6"
-  spec.add_dependency "graphql-client", "~> 0.16.0"
+  spec.add_dependency "graphql", "~> 2.3"
+  spec.add_dependency "graphql-client", "~> 0.23"
   spec.add_dependency "relaton-iso-bib", "~> 1.19.0"
 end
