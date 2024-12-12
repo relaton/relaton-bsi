@@ -138,11 +138,11 @@ relation:
 place:
 - London
 fetched: '2021-04-20'
-editorialgroup:
-  technical_committee:
-  - name: GME/33
-ics:
-- code: '47.080'
-  text: Small craft
 ext:
   schema-version: v1.0.2
+  editorialgroup:
+    technical_committee:
+    - name: GME/33
+  ics:
+  - code: '47.080'
+    text: Small craft
