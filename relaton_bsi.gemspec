@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/relaton_bsi/version"
+require_relative "lib/relaton/bsi/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "relaton-bsi"
-  spec.version       = RelatonBsi::VERSION
+  spec.version       = Relaton::Bsi::VERSION
   spec.authors       = ["Ribose Inc."]
   spec.email         = ["open.source@ribose.com"]
 
-  spec.summary       = "RelatonBsi: retrieve BSI Standards for bibliographic " \
+  spec.summary       = "Relaton::Bsi: retrieve BSI Standards for bibliographic " \
                        "use using the BibliographicItem model"
-  spec.description   = "RelatonBsi: retrieve BSI Standards for bibliographic " \
+  spec.description   = "Relaton::Bsi: retrieve BSI Standards for bibliographic " \
                        "use using the BibliographicItem model"
   spec.homepage      = "https://github.com/metanorma/relaton-bsi"
   spec.license       = "BSD-2-Clause"
@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday-net_http_persistent", "~> 2.0"
   spec.add_dependency "graphql", "~> 2.3"
   spec.add_dependency "graphql-client", "~> 0.23"
-  spec.add_dependency "relaton-iso-bib", "~> 1.20.0"
+  spec.add_dependency "relaton-iso", "~> 2.0.0-alpha.1"
 end

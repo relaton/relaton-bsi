@@ -1,0 +1,125 @@
+---
+id: BSENISO8848-2021
+schema_version: v1.2.9
+title:
+- type: title-main
+  content: Small craft. Remote mechanical steering systems
+  language: en
+  script: Latn
+- type: main
+  content: Small craft. Remote mechanical steering systems
+  language: en
+  script: Latn
+- type: title-main
+  content: Petits navires. Appareils à gouverner commandés à distance
+  language: fr
+  script: Latn
+- type: main
+  content: Petits navires. Appareils à gouverner commandés à distance
+  language: fr
+  script: Latn
+- type: title-main
+  content: Kleine Wasserfahrzeuge. Steueranlagen
+  language: de
+  script: Latn
+- type: main
+  content: Kleine Wasserfahrzeuge. Steueranlagen
+  language: de
+  script: Latn
+source:
+- content: https://shop.bsigroup.com/ProductDetail?pid=000000000030382851
+  type: src
+type: standard
+docidentifier:
+- content: BS EN ISO 8848:2021
+  type: BSI
+  primary: true
+- content: 978 0 539 02257 5
+  type: ISBN
+date:
+- type: published
+  at: '2021-04-14'
+contributor:
+- organization:
+    name:
+    - content: British Standards Institution
+    abbreviation:
+      content: BSI
+    uri:
+      - content: https://www.bsigroup.com/
+  role:
+  - type: publisher
+language:
+- en
+script:
+- Latn
+abstract:
+- content: 'Steering wheels, Static loading, Fasteners, Boats, Deformation, Dimensions,
+    Steering gear, Distant, Specimen preparation, Vehicle components, Mechanical testing,
+    Testing conditions, Water transport engineering components, Steering control devices,
+    Installation, Impact testing '
+  language: en
+  script: Latn
+status:
+  stage:
+    content: Current
+copyright:
+- owner:
+    organization:
+      name:
+      - content: British Standards Institution
+      abbreviation:
+        content: BSI
+      uri:
+        - content: https://www.bsigroup.com/
+  from: '2021'
+relation:
+- type: complementOf
+  bibitem:
+    source:
+    - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030415929
+      type: src
+    type: standard
+    formattedref: BS EN ISO 8848:2017
+- type: complementOf
+  bibitem:
+    source:
+    - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352033
+      type: src
+    type: standard
+    formattedref: BS EN ISO 9775:2017
+- type: complementOf
+  bibitem:
+    source:
+    - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352021
+      type: src
+    type: standard
+    formattedref: BS EN ISO 15652:2017
+place:
+- formatted_place: London
+fetched: '2021-04-20'
+ext:
+  schema_version: v1.0.2
+  doctype:
+    content: standard
+  flavor: bsi
+  editorialgroup:
+    technical_committee:
+    - number: 47
+      type: TC
+      identifier: TC 47
+      prefix: PRF
+      content: Small craft
+  ics:
+  - code: '47.080'
+    text: Small craft
+  structuredidentifier:
+    type: BSI
+    project_number:
+      part: 1
+      subpart: 2
+      amendment: 3
+      corrigendum: 4
+      origyr: "2021"
+      content: EN ISO 8848-1-2:2021/Amd 3/Cor 4
+    tc_document_number: 8848
