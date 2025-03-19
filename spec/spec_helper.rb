@@ -2,10 +2,11 @@
 
 require "rspec/matchers"
 require "equivalent-xml"
+require "jing"
 
 Dir["./spec/support/**/*.rb"].sort.each { |f| require f }
 
-require "relaton_bsi"
+require "relaton/bsi"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,0 +1,85 @@
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2023-02-22</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+  <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
+  <docidentifier type="BSI" primary="true">BS EN ISO 8848</docidentifier>
+  <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
+  <docnumber>8848</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>British Standards Institution</name>
+      <abbreviation>BSI</abbreviation>
+      <uri>https://www.bsigroup.com/</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>Current</stage>
+  </status>
+  <copyright>
+    <from>2022</from>
+    <owner>
+      <organization>
+        <name>British Standards Institution</name>
+        <abbreviation>BSI</abbreviation>
+        <uri>https://www.bsigroup.com/</uri>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="instanceOf">
+    <bibitem type="standard">
+      <fetched>2023-02-22</fetched>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
+      <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
+      <docidentifier type="BSI" primary="true">BS EN ISO 8848:2022</docidentifier>
+      <docidentifier type="ISBN">978 0 539 18833 2</docidentifier>
+      <docnumber>8848</docnumber>
+      <date type="published">
+        <on>2022-08-31</on>
+      </date>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          <name>British Standards Institution</name>
+          <abbreviation>BSI</abbreviation>
+          <uri>https://www.bsigroup.com/</uri>
+        </organization>
+      </contributor>
+      <language>en</language>
+      <script>Latn</script>
+      <abstract format="text/plain" language="en" script="Latn">1 Scope This document specifies design, construction, installation and test requirements for remote mechanical cable steering systems and the output raminterface point to rudders, jet drives, outboard and sterndrive engines for small craft. It is applicable to three distinct classes of steering systems for use on various types of craft: — standard duty steering systems, for small craft with single and twin installations of outboard engines with a total over 15 kW power, and with rudders, sterndrives and water-jet drives; — light duty steering systems, for small craft with a single outboard engine of 15 kW to 40 kW power; — mini-jet steering systems, excluding personal watercraft. NOTE Standard and light duty steering systems are mechanically interchangeable. A standard duty steering system can be used on a craft designed for a light duty system. However, a light duty steering system cannot be used on a craft that requires a standard duty steering system. Mini-jet steering systems are mechanically differentiated from the previously mentioned systems and can only be used on mini-jet craft as defined in this document. This document does not address emergency means for steering the craft.</abstract>
+      <status>
+        <stage>Current</stage>
+      </status>
+      <copyright>
+        <from>2022</from>
+        <owner>
+          <organization>
+            <name>British Standards Institution</name>
+            <abbreviation>BSI</abbreviation>
+            <uri>https://www.bsigroup.com/</uri>
+          </organization>
+        </owner>
+      </copyright>
+      <place>London</place>
+    </bibitem>
+  </relation>
+  <place>London</place>
+  <ext schema-version="v1.0.2">
+    <doctype>standard</doctype>
+    <editorialgroup>
+      <technical-committee>GME/33</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>47.080</code>
+      <text>Small craft</text>
+    </ics>
+    <structuredidentifier>
+      <project-number>BS EN ISO 8848</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

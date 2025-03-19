@@ -1,4 +1,4 @@
-<bibdata type="standard" schema-version="v1.2.9">
+<bibitem id="BSENISO8848-2021" type="standard" schema-version="v1.2.9">
   <fetched>2021-04-20</fetched>
   <title language="en" script="Latn" type="title-main">Small craft. Remote mechanical steering systems</title>
   <title language="en" script="Latn" type="main">Small craft. Remote mechanical steering systems</title>
@@ -57,19 +57,4 @@
   <place>
     <formattedPlace>London</formattedPlace>
   </place>
-  <ext schema-version="v1.0.2">
-    <doctype>standard</doctype>
-    <flavor>bsi</flavor>
-    <editorialgroup>
-      <technical-committee number="47" type="TC" identifier="TC 47" prefix="PRF">Small craft</technical-committee>
-    </editorialgroup>
-    <ics>
-      <code>47.080</code>
-      <text>Small craft</text>
-    </ics>
-    <structuredidentifier type="BSI">
-      <project-number part="1" subpart="2" amendment="3" corrigendum="4" origyr="2021">EN ISO 8848-1-2:2021/Amd 3/Cor 4</project-number>
-      <tc-document-number>8848</tc-document-number>
-    </structuredidentifier>
-  </ext>
-</bibdata>
+</bibitem>
