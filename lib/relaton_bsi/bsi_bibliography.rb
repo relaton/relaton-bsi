@@ -118,7 +118,7 @@ module RelatonBsi
           Util.info "Found: `#{ret[:ret].docidentifier.first&.id}`", key: code
           ret[:ret]
         else
-          Util.info "No found", key: code
+          Util.info "Not found", key: code
           fetch_ref_err(code, year, ret[:years])
         end
       end

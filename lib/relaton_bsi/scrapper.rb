@@ -13,6 +13,14 @@ module RelatonBsi
       def headers(_context)
         { "x-shopify-storefront-access-token": "c935c196c0b7d1d86bfb5139006cfd46" }
       end
+
+      def connection
+        http = super
+        store = OpenSSL::X509::Store.new
+        store.set_default_paths
+        http.cert_store = store
+        http
+      end
     end
 
     Schema = GraphQL::Client.load_schema File.join(__dir__, "schema.json")
