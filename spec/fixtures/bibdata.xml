@@ -1,5 +1,5 @@
 <bibdata type="standard" schema-version="v1.2.9">
-  <fetched>2023-02-22</fetched>
+  <fetched>2026-04-08</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
   <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
@@ -31,7 +31,7 @@
   </copyright>
   <relation type="instanceOf">
     <bibitem type="standard">
-      <fetched>2023-02-22</fetched>
+      <fetched>2026-04-08</fetched>
       <title type="title-main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
       <title type="main" format="text/plain" language="en" script="Latn">Small craft. Remote mechanical steering systems</title>
       <uri type="src">https://shop.bsigroup.com/products/small-craft-remote-mechanical-steering-systems-2</uri>
@@ -65,10 +65,14 @@
           </organization>
         </owner>
       </copyright>
-      <place>London</place>
+      <place>
+        <city>London</city>
+      </place>
     </bibitem>
   </relation>
-  <place>London</place>
+  <place>
+    <city>London</city>
+  </place>
   <ext schema-version="v1.0.2">
     <doctype>standard</doctype>
     <editorialgroup>

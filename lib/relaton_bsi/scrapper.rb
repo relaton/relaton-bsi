@@ -99,7 +99,7 @@ module RelatonBsi
           copyright: fetch_copyright(hit),
           link: fetch_link(hit.hit[:url]),
           # relation: fetch_relations(doc),
-          place: ["London"],
+          place: [RelatonBib::Place.new(city: "London")],
         )
       end
 
