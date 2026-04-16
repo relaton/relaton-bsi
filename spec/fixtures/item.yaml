@@ -65,7 +65,7 @@ status:
     content: Current
 copyright:
 - owner:
-    organization:
+  - organization:
       name:
       - content: British Standards Institution
       abbreviation:
@@ -80,21 +80,24 @@ relation:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030415929
       type: src
     type: standard
-    formattedref: BS EN ISO 8848:2017
+    formattedref:
+      content: BS EN ISO 8848:2017
 - type: complementOf
   bibitem:
     source:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352033
       type: src
     type: standard
-    formattedref: BS EN ISO 9775:2017
+    formattedref:
+      content: BS EN ISO 9775:2017
 - type: complementOf
   bibitem:
     source:
     - content: https://shop.bsigroup.com/ProductDetail/?pid=000000000030352021
       type: src
     type: standard
-    formattedref: BS EN ISO 15652:2017
+    formattedref:
+      content: BS EN ISO 15652:2017
 place:
 - formatted_place: London
 fetched: '2021-04-20'
@@ -107,7 +110,7 @@ ext:
   - code: '47.080'
     text: Small craft
   structuredidentifier:
-    type: BSI
+  - type: BSI
     project_number:
       part: 1
       subpart: 2
