@@ -65,7 +65,7 @@ status:
     content: Current
 copyright:
 - owner:
-    organization:
+  - organization:
       name:
       - content: British Standards Institution
       abbreviation:
@@ -107,7 +107,7 @@ ext:
   - code: '47.080'
     text: Small craft
   structuredidentifier:
-    type: BSI
+  - type: BSI
     project_number:
       part: 1
       subpart: 2

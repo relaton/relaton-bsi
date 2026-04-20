@@ -3,7 +3,7 @@ require_relative "doctype"
 module Relaton
   module Bsi
     class Ext < Lutaml::Model::Serializable
-      attribute :schema_version, method: :get_schema_version
+      attribute :schema_version, :string, method: :get_schema_version
       attribute :doctype, Doctype
       attribute :subdoctype, :string
       attribute :flavor, :string
@@ -12,6 +12,7 @@ module Relaton
       attribute :stagename, Iso::Stagename
 
       xml do
+        root "ext"
         map_attribute "schema-version", to: :schema_version
         map_element "doctype", to: :doctype
         map_element "subdoctype", to: :subdoctype
